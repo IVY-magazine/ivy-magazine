@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/css/magazine.css' %}">
+    <script src="{% static '/js/magazine.js' %}" type="text/javascript"></script> 
+    <title>IVY magazine</title>
+    
+</head>
+
+<body>
+<nav>
+    <div class="logo heading">
+      Ivy
+    </div>
+    <ul>
+      <li>
+          one
+      </li>
+      <li>
+        two
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-search" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <line x1="4" y1="8" x2="20" y2="8" />
+          <line x1="4" y1="16" x2="20" y2="16" />
+        </svg>
+      </li>
+    </ul>
+  </nav>
+  <div class="absolute-wrapper">
+    <div class="colored-backgrounds">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <main>
+    <div class="content">
+      <div>
+        <h1 class="heading">
+            SPRING 2020
+        </h1>
+        <p class="mDescription">
+          The theme of IVY's Spring 2020 Magazine<br />
+          was "Awaken Your Passion," inspired by the<br />
+          hard work and dedication our members put<br />
+          into creating this issue,
+        </p>
+        <p class="mDescription">
+            Features include: Wild College Kids x MSC photoshoot, <br />
+            interviews with professors, alumni, and students, <br />
+            and special articles.
+        </p>
+        <div class="button">
+        <button onclick="viewMagazine()" type="button">View Portraits</button>
+        </div>
+    </div>
+    </div>
+    <div class="wrapper">
+      <div class="images">
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+      </div>
+    </div>
+    <div class="navigation">
+      <div onClick="right()" class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <polyline points="9 6 15 12 9 18" />
+        </svg>
+      </div>
+      <div onClick="left()" class="left">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-left" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <polyline points="15 6 9 12 15 18" />
+        </svg>
+      </div>
+    </div>
+  </main>
+ 
+  </body>
+</html>
