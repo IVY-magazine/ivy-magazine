@@ -15,10 +15,11 @@
     {% include 'magazines/navbar.html'%}
 
     <!-- Section where chind template redesign -->
+    <div class ="container-fluid">
+        {% block content %}
 
-    {% block content %}
-
-    {% endblock %}
+        {% endblock %}
+    </div>
 
     <hr>
     <h5>Test footer</h5>
