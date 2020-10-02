@@ -1,0 +1,12 @@
+{% extends 'magazines/main.html'%}
+
+{% block content %}
+<div>
+    <h2 >BLOG</h2>
+    <script async width = '100%' height = '600px' src="https://static.medium.com/embed.js" scrolling="yes"></script><a class="m-profile" href="https://medium.com/@ivisualizeyou"></a>
+</div>
+<div heigth :800px>
+    <!-- <iframe width = '100%' height = '600px' src = "{% url 'mediumBlog' %}" name="test" id="test" frameborder="1" scrolling="yes"></iframe></iframe> -->
+    <object type = 'text/html' data = 'https://medium.com/@ivisualizeyou'></object>
+</div>
+{% endblock %}
