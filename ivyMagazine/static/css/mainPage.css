@@ -1,0 +1,34 @@
+.grid-container{
+    display: grid;
+    grid-template-rows: 1;
+    height: 65vh;
+    background-color: #FFD94E;
+}
+
+.textSec{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    width: 30vw;
+    padding: 2vw;
+}
+
+.imgSec{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 55vw;
+}
+
+.navBar{
+    height: 25vh;
+    margin-top: 1vw;
+}
+
+p{
+    width: 100%;
+    text-align: center;
+}
+
+a{
+    padding: 1vw;
+}
+
