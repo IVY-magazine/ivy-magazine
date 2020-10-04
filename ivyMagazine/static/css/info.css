@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
 
+.grid-container{
+  height: 100vh;
+}
+
 
 tr{
   font-size: 2rem;
