@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
+.title{
+    font-family: Playfair Display;
+font-style: normal;
+font-weight: bold;
+font-size: 60px;
+line-height: 80px;
+text-align: left;
+color: #000000;
+}
+.subTitle{
+    font-family: Playfair Display;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 53px;
+text-align: left;
+
+color: #000000;
+}
+.subsubTitle{
+    font-family: Raleway;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+text-align: left;
+
+color: #000000;
+}
+.contents{
+    font-family: Raleway;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+text-align: left;
+color: #000000;
+}
+.recrut-state{
+    font-family: Raleway;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-align: left;
+color: #000000;
+}
+.recrut{
+    font-family: Raleway;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-align: left;
+color: #000000;
+
+}
+.titleDiv{
+    position: absolute;
+
+left: 4vw;
+top: 3vh;
+}
+#t1{
+    position: absolute;
+width: 40vw;
+height: 55vh;
+left: 8vw;
+top: 5vh;
+overflow: visible
+
+}
+#st1{
+    position: absolute;
+    width: 40vw;
+    height: 55vh;
+    left: 8vw;
+    top: 18vh;
+    overflow: visible
+}
+#ct1{
+    position: absolute;
+    width: 20vw;
+    height: 55vh;
+    left: 8vw;
+    top: 25vh;
+    text-align: left;
+    overflow: visible
+}
+#st2{
+    position: absolute;
+    width: 40vw;
+    height: 55vh;
+    left: 8vw;
+    top: 75vh;
+    overflow: visible
+}
+#ct2{
+    position: absolute;
+    width: 20vw;
+    height: 55vh;
+    left: 8vw;
+    top: 85vh;
+    overflow: visible
+}
+#video{
+    position: absolute;
+    left: 8vw;
+    top: 123vh;
+    overflow: visible
+}
+.row{
+    height: 180vh
+}
+#r1{
+    position: absolute;
+    width: 40vw;
+    height: 55vh;
+    left: 3vw;
+    top: 75vh;
+    overflow: visible
+}
+#contactbtn{
+    position: absolute;
+    width: 30vw;
+    align-items: center;
+    background: #FFFFFF;
+border: 1px solid #3D3D3D;
+box-sizing: border-box;
+border-radius: 30px;
+    font-family: Raleway;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+}
