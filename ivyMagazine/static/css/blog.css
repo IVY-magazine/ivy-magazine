@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
+.mainBody{
+    
+    align-items: center;
+    overflow: visible
+}
+.titleBar{
+
+text-align: center;
+
+color: #000000;
+}
+.blogTitle{
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center;
+    
+    color: #000000;
+
+}
+.blogLink{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 35px;
+
+color: #5582F8;
+}
