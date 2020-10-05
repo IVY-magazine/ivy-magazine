@@ -5,6 +5,10 @@ def home(request):
     context = {}
     return render(request, 'magazines/homepage.html', context)
 
+def loginHome(request):
+    context = {}
+    return render(request, 'magazines/loginHome.html', context)
+
 def blog(request):
     context = {}
     return render(request, 'magazines/blog.html', context)

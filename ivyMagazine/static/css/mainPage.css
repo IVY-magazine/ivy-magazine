@@ -1,8 +1,13 @@
 .grid-container{
     display: grid;
     grid-template-rows: 1;
-    height: 65vh;
     background-color: #FFD94E;
+}
+
+.navbar-block{
+    height: 20vh;
+    width: 100vw;
+    background-color: #343a40!important;
 }
 
 .textSec{
@@ -15,7 +20,6 @@
 .imgSec{
     grid-column-start: 2;
     grid-column-end: 2;
-    width: 55vw;
 }
 
 .navBar{
