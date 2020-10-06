@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
+body{
+    height: 220vh;
+}
 .title{
     font-family: Playfair Display;
 font-style: normal;
 font-weight: bold;
-font-size: 60px;
-line-height: 80px;
+font-size: 60rem;
+
 text-align: left;
 color: #000000;
 }
@@ -12,8 +15,7 @@ color: #000000;
     font-family: Playfair Display;
 font-style: normal;
 font-weight: bold;
-font-size: 40px;
-line-height: 53px;
+font-size: 40rem;
 text-align: left;
 
 color: #000000;
@@ -22,7 +24,7 @@ color: #000000;
     font-family: Raleway;
 font-style: normal;
 font-weight: bold;
-font-size: 24px;
+font-size: 24rem;
 line-height: 28px;
 text-align: left;
 
@@ -32,7 +34,7 @@ color: #000000;
     font-family: Raleway;
 font-style: normal;
 font-weight: normal;
-font-size: 20px;
+font-size: 20rem;
 line-height: 23px;
 text-align: left;
 color: #000000;
@@ -41,7 +43,7 @@ color: #000000;
     font-family: Raleway;
 font-style: normal;
 font-weight: normal;
-font-size: 24px;
+font-size: 24rem;
 line-height: 28px;
 text-align: left;
 color: #000000;
@@ -50,20 +52,20 @@ color: #000000;
     font-family: Raleway;
 font-style: normal;
 font-weight: normal;
-font-size: 24px;
+font-size: 24rem;
 line-height: 28px;
 text-align: left;
 color: #000000;
 
 }
 .titleDiv{
-    position: absolute;
+
 
 left: 4vw;
 top: 3vh;
 }
 #t1{
-    position: absolute;
+
 width: 40vw;
 height: 55vh;
 left: 8vw;
@@ -72,7 +74,7 @@ overflow: visible
 
 }
 #st1{
-    position: absolute;
+    
     width: 40vw;
     height: 55vh;
     left: 8vw;
@@ -80,7 +82,7 @@ overflow: visible
     overflow: visible
 }
 #ct1{
-    position: absolute;
+    
     width: 20vw;
     height: 55vh;
     left: 8vw;
@@ -89,7 +91,7 @@ overflow: visible
     overflow: visible
 }
 #st2{
-    position: absolute;
+   
     width: 40vw;
     height: 55vh;
     left: 8vw;
@@ -97,7 +99,7 @@ overflow: visible
     overflow: visible
 }
 #ct2{
-    position: absolute;
+    
     width: 20vw;
     height: 55vh;
     left: 8vw;
@@ -105,16 +107,16 @@ overflow: visible
     overflow: visible
 }
 #video{
-    position: absolute;
+    
     left: 8vw;
     top: 123vh;
     overflow: visible
 }
 .row{
-    height: 180vh
+    height: 220vh
 }
 #r1{
-    position: absolute;
+   
     width: 40vw;
     height: 55vh;
     left: 3vw;
@@ -122,7 +124,7 @@ overflow: visible
     overflow: visible
 }
 #contactbtn{
-    position: absolute;
+    
     width: 30vw;
     align-items: center;
     background: #FFFFFF;
@@ -132,7 +134,7 @@ border-radius: 30px;
     font-family: Raleway;
 font-style: normal;
 font-weight: normal;
-font-size: 25px;
+font-size: 25rem;
 line-height: 29px;
 text-align: center;
 
