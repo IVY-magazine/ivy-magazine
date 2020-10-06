@@ -12,6 +12,8 @@ urlpatterns = [
     path('aboutUs/', views.aboutUs, name="aboutUs"),
     path('contactUs/', views.contactUs, name="contactUs"),
     path('info/', views.info, name='info'),
+    path('signIn/', views.signIn, name='signIn'),
+    path('signUp/', views.signUp, name='signUp'),
     url(r'^mediumBlog/', TemplateView.as_view(template_name="medium.com/@ivisualizeyou"),
                    name='mediumBlog'),
 ]

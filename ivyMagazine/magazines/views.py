@@ -33,4 +33,10 @@ def info(request):
     context = {}
     return render(request, 'magazines/info.html', context)
 
-   
+def signIn(request):
+    context = {}
+    return render(request, 'magazines/signIn.html', context)
+
+def signUp(request):
+    context = {}
+    return render(request, 'magazines/signUp.html', context)
