@@ -1,15 +1,18 @@
 {% extends 'magazines/main.html'%}
-
+{% load static %}
 {% block content %}
 
-<link rel="stylesheet" type="text/css" href="../static/css/aboutUs.css">
-<div class = 'row' style="position: relative; height: 220vh">
+
+<div class = 'row' style="position: relative; height: 180vh">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/aboutUs.css' %}">
     <div class = 'col-7' style = background-color:#FFD94E>
-        <div id = t1>
-            <p class = 'title' style ='font-size: 3.5rem;position: relative;'>  OUR STORY</p>
+        <div id = t1 style = "position: relative;">
+            <p class = 'title' style ='font-size: 3.5rem;position: relative;
+            '>  OUR STORY</p>
         </div>
-        <div id = "st1" >
-            <p class = 'subTitle' style = 'font-size: 2.5rem;position: relative;'> Who we are</p>
+        <div id = "st1" style = " position: relative;">
+            <p class = 'subTitle' style = 'font-size: 2.5rem;position: relative;
+            '> Who we are</p>
         </div>
         <div id = 'ct1' style = 'font-size: 1.2rem;position: relative;'>
             <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>
@@ -25,82 +28,87 @@
             </p>
         </div>
         <div id = 'st2'>
-            <p class = 'subTitle'>What We Do</p>
+            <p class = 'subTitle' style = 'font-size: 2.5rem;position: relative;'>What We Do</p>
         </div>
         <div id = 'ct2'>
-            <p class = 'contents'>
+            <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>
                 In addition to a full-length magazine with 
                 Editorial Photoshoots, Special Articles, and Interviews, 
                 IVY is active on SNS, posting on a blog and Instagram. 
             </p>
-            <p class = 'contents'>   
+            <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>   
                 Since 2018, we have done various projects, including 
                 collaborations with up-and-coming Korean fashion designers, 
                 Q&As with alumni in the industry, and features covering various 
                 topics such as Seoul Fashion Week streetstyle. 
             </p>
-            <p class = 'contents'>    
+            <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>    
                 All of IVY’s content is directed and produced entirely 
                 by students, under the guidance of our faculty advisors. 
             
             </p>
         </div>
         <div id = 'video' class="video-container" style="text-align: center; margin-top: 2vh;">
-            <object type="text/html" width="300%" height="500vh" data="//www.youtube.com/embed/XAW7MsAtjq8">
+            <object type="text/html" width="90%" height="500vh" data="//www.youtube.com/embed/XAW7MsAtjq8">
         </object>
     </div>
     </div>
     <div class = 'col-5' style = background-color:white> 
-        <div id = 'r1'>   
-            <p class = 'subTitle'>Recruitment</p>
-            <p class = 'recrut-state'>
+        <div id = 'r1' style = "
+       
+        left: 3vw;
+        top: 100vh;">   
+            <p class = 'subTitle' style = 'font-size: 2.5rem;position: relative;'>Recruitment</p>
+            <p class = 'recrut-state' style = 'font-size: 2.2rem;position: relative;'>
                 Interested in joining us?
             </p> 
-            <p class = 'recrut-state'>
+            <p class = 'recrut-state' style = 'font-size: 2.2rem;position: relative;'>
                 Various positions are available to all students from IGC!
             </p>
             <br>
-            <p class = 'subsubTitle'>Writing Team</p>
-            <p class = 'recrut'>
+            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;'>Writing Team</p>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
             Journalists 
             </p>
-            <p class = 'recrut'>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
             Interviewers   
             </p>
             <br>
-            <p class = 'subsubTitle'>Styling Team</p>
-            <p class = 'recrut'>
+            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;' >Styling Team</p>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
             Stylists
             </p>
-            <p class = 'recrut'> 
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'> 
             esigners
             </p> 
-            <p class = 'recrut'>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
             Hair and Makeup Artists
             </p>
             <br>
-            <p class = 'subsubTitle'>Layout Team</p>
-            <p class = 'recrut'>
+            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;'>Layout Team</p>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
             Layout Designers
             </p>
             <br>
-            <p class = 'subsubTitle'>Photography Team</p>
-            <p class = 'recrut'>
+            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;'>Photography Team</p>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
             Editorial Photographers
             </p> 
-            <p class = 'recrut'>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
             Portrait Photographers
             </p> 
-            <p class = 'recrut'>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
             Article Photographers 
             </p>
             <br>
-            <p class = 'subsubTitle'>Modeling Team</p>
-            <p class = 'recrut'> 
+            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;'>Modeling Team</p>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'> 
             Editorial Models 
+            </p>
+            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'> 
             Influencer Models
             </p>
-            <button id = 'contactbtn' type="button" class="btn btn-secondary btn-lg">Contact Us</button> 
+            <button id = 'contactbtn' type="button" class="btn btn-secondary btn-lg" style = 'font-size: 2.5rem;position: relative;'>Contact Us</button> 
         </div>
     </div>
     
@@ -108,7 +116,7 @@
     <div class = "aboutPic" style="position: relative;width: 75vw;
         height: 65vh;
         left: 24vw;
-        top: -213vh; z-index:1">
+        top: -175vh; z-index:1">
         <img style = 'height: 100%; width: 100%; object-fit: contain;' src="../static/images/aboutPic.png" alt=""> 
     </div>
     

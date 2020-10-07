@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
 body{
-    height: 220vh;
+    height: 180vh;
 }
 .title{
     font-family: Playfair Display;
 font-style: normal;
 font-weight: bold;
-font-size: 60rem;
-
 text-align: left;
 color: #000000;
 }
@@ -15,7 +13,6 @@ color: #000000;
     font-family: Playfair Display;
 font-style: normal;
 font-weight: bold;
-font-size: 40rem;
 text-align: left;
 
 color: #000000;
@@ -24,7 +21,6 @@ color: #000000;
     font-family: Raleway;
 font-style: normal;
 font-weight: bold;
-font-size: 24rem;
 line-height: 28px;
 text-align: left;
 
@@ -34,7 +30,6 @@ color: #000000;
     font-family: Raleway;
 font-style: normal;
 font-weight: normal;
-font-size: 20rem;
 line-height: 23px;
 text-align: left;
 color: #000000;
@@ -43,7 +38,6 @@ color: #000000;
     font-family: Raleway;
 font-style: normal;
 font-weight: normal;
-font-size: 24rem;
 line-height: 28px;
 text-align: left;
 color: #000000;
@@ -52,33 +46,22 @@ color: #000000;
     font-family: Raleway;
 font-style: normal;
 font-weight: normal;
-font-size: 24rem;
 line-height: 28px;
 text-align: left;
 color: #000000;
 
 }
-.titleDiv{
-
-
+/* .titleDiv{
 left: 4vw;
 top: 3vh;
 }
 #t1{
 
-width: 40vw;
-height: 55vh;
-left: 8vw;
-top: 5vh;
+
 overflow: visible
 
 }
-#st1{
-    
-    width: 40vw;
-    height: 55vh;
-    left: 8vw;
-    top: 18vh;
+#st1{ 
     overflow: visible
 }
 #ct1{
@@ -105,24 +88,14 @@ overflow: visible
     left: 8vw;
     top: 85vh;
     overflow: visible
-}
+} */
 #video{
     
     left: 8vw;
     top: 123vh;
     overflow: visible
 }
-.row{
-    height: 220vh
-}
-#r1{
-   
-    width: 40vw;
-    height: 55vh;
-    left: 3vw;
-    top: 75vh;
-    overflow: visible
-}
+
 #contactbtn{
     
     width: 30vw;
