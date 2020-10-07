@@ -51,9 +51,8 @@ text-align: left;
 color: #000000;
 
 }
-/* .titleDiv{
-left: 4vw;
-top: 3vh;
+.titleDiv{
+
 }
 #t1{
 
@@ -65,13 +64,9 @@ overflow: visible
     overflow: visible
 }
 #ct1{
-    
-    width: 20vw;
-    height: 55vh;
-    left: 8vw;
-    top: 25vh;
+  
     text-align: left;
-    overflow: visible
+   
 }
 #st2{
    
@@ -88,7 +83,7 @@ overflow: visible
     left: 8vw;
     top: 85vh;
     overflow: visible
-} */
+}
 #video{
     
     left: 8vw;
