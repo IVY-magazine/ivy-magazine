@@ -1,31 +1,36 @@
 {% extends 'magazines/main.html'%}
 {% load static %}
 {% block content %}
-<div class="grid-container" style = "background-color:#FFD94E; height: 85.5vh;">
+<main id="main" role="main" >
+<div class="grid-container" style = "background-color:#FFD94E; height: 85.5vh; width: 100vw;">
   <link rel="stylesheet" type="text/css" href="{% static '/css/info.css' %}">
   <div>
     <div class="myInfo" style="text-align: left; margin-left: 4rem; margin-top: 2rem; font-size: 5rem;">
       MYINFO
     </div>
     <hr style="visibility: hidden;">
-    <table class="center" style="border: none; margin-left: auto; text-align: center;">
-      <tr>
-        <th style="text-align: left;">
-          USER NAME
-        </th>
-        <th style="text-align: left; margin-left: 10rem;">
-          Alex
-        </th>
-      </tr>
-      <tr>
-        <th style="text-align: left;">
-          USER EMAIL
-        </th>
-        <th style="text-align: left; margin-left: 10rem;">
-          alex@sunykorea.ac.kr
-        </th>
-      </tr>
-    </table>
+    <div style="position: relative;">
+      <table class="center" style="border: none; margin-left: auto; text-align: center; position: relative">
+        <tr>
+          <th style="text-align: left;">
+            USER NAME
+          </th>
+          <th style="text-align: left; margin-left: 10rem;">
+            Alex
+          </th>
+        </tr>
+        <tr>
+          <th style="text-align: left;">
+            USER EMAIL
+          </th>
+          <th style="text-align: left; margin-left: 10rem;">
+            alex@sunykorea.ac.kr
+          </th>
+        </tr>
+      </table>
+    </div>
+    
   </div>
 </div>
+</section>
 {%endblock%}

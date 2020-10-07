@@ -31,3 +31,4 @@ class CustomerAdmin(admin.ModelAdmin):
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
+

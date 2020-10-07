@@ -22,6 +22,7 @@ class Magazine(models.Model):
     category = models.CharField(max_length=200, null =True, choices=CATEGORY)
     description = models.CharField(max_length=300, null =True) #blank=True
     pdf = models.FileField(null =True, blank = True)
+    date_created = models.DateTimeField(auto_now_add=True, null =True)
 
     def save(self, *args, **kwargs):
         super(Magazine, self).save(*args, **kwargs)
@@ -43,6 +44,5 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return self.name
-
 
 
