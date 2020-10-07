@@ -25,7 +25,10 @@ nav li a {
     padding: 14px 16px;
     text-decoration: none;
   }
-  
+
+nav ul #sign_in{
+   margin-left: 17vw;
+}
   /* Change the link color to #111 (black) on hover */
 nav li a:hover {
    

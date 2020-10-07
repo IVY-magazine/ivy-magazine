@@ -32,6 +32,10 @@ body nav ul {
     text-decoration: none;
   }
   
+
+body nav ul #sign_in{
+    margin-left: 17vw;
+ }
   /* Change the link color to #111 (black) on hover */
   body nav li a:hover {
    
@@ -44,7 +48,7 @@ section{
     align-self: center;
     min-height: 100vh;
     min-width: 100vw;
-    background: #E5E5E5;
+    background: #ffffff;
 }
 
 section::before
@@ -260,7 +264,7 @@ section .container .purchaseForm .formBox .inputBox textarea
 {
     position: relative;
   
-    width: 70% !important;
+    width: 65% !important;
  
     font-size: 15px;
     font-weight: 300;
@@ -268,14 +272,14 @@ section .container .purchaseForm .formBox .inputBox textarea
     border:none;
     border-bottom: 1px solid #777;
     outline: none;
-    background: #E5E5E5;
+    background: #ffffff;
 }
 
 section .container .purchaseForm .formBox .inputBox input[type="submit"]
 {
     position: relative;
     cursor: pointer;
-    background: #E5E5E5;
+    background: #ffffff;
     color: #333;
     border: 1px solid #333;
     top: 12.5vh;
