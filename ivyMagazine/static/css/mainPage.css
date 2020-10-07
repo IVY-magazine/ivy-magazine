@@ -20,6 +20,10 @@ grid-container{
 .imgSec{
     grid-column-start: 2;
     grid-column-end: 2;
+    position: relative;
+    width: 70vw; 
+    top: -10vh;
+    left: 0vw;
 }
 
 .navBar{
