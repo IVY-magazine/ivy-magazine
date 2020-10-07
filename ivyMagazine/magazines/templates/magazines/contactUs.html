@@ -12,6 +12,17 @@
 
 
 <body>
+    <nav>
+        <ul >
+            <li><img src = '../static/images/ivyLogo.jpg'/></li>
+                <li><a class="nav-link" href="{% url 'home' %}">HOME</a></li>
+                <li><a class="nav-link" href="{% url 'blog' %}">BLOG</a></li>
+                <li><a class="nav-link" href="{% url 'portfolio' %}">PORTFOLIO</a></li>
+                <li><a class="nav-link" href="{% url 'magazine' %}">MAGAZINE</a></li>
+                <li><a class="nav-link" href="{% url 'aboutUs' %}">ABOUT US</a></li>
+                <li><a class="nav-link" href="{% url 'contactUs' %}">CONTACT US</a></li>
+          </ul>
+    </nav>
     <section>
         <div class="container">
             <div class="contactForm">

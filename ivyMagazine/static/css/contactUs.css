@@ -7,6 +7,34 @@ body{
     font-family: 'Playfair Display', serif;
 }
 
+body nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  
+  body nav li {
+    float: left;
+  }
+  
+  body nav li a {
+    margin-top: 9px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  body nav li a:hover {
+   
+  }
 
 section{
     position: relative;
@@ -261,3 +289,4 @@ section .container .purchaseForm .formBox .inputBox input[type="submit"]:hover{
     background: #333;
     color: #E5E5E5;
 }
+
