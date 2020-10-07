@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@500&display=swap');
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    
+  }
+  
+nav li {
+  margin-left: 15px;
+    float: left;
+  }
+  
+nav li a {
+    margin-top: 9px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+nav li a:hover {
+   
+  }

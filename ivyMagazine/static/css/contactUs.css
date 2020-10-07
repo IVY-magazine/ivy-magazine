@@ -20,10 +20,11 @@ body nav ul {
   
   body nav li {
     float: left;
+    margin-left: 15px;
   }
   
   body nav li a {
-    margin-top: 9px;
+    margin-top: 4px;
     display: block;
     color: black;
     text-align: center;
