@@ -19,15 +19,20 @@ This web application will provide **IVY** four major features. The administrator
 
 ### IVY Magazine Connection
 
+#### Set up
+1. In order to set the envionment, users must intall Python: https://www.python.org/downloads/
+2. After the installation, user must intall Django: https://docs.djangoproject.com/en/3.1/topics/install/
+3. Download the file from the Github page: https://github.com/IVY-magazine/ivy-magazine
+
 #### Connect to the Server:
-1. Go into ivyMagazine folder where manage.py file is located.
+1. After downloading the file, open the file with IDE and go into **ivyMagazine folder** where **manage.py** file is located.
 2. In the terminal type: **python manage.py runserver**
 3. Server connects to local address (http://127.0.0.1:8000/)
 
 #### Connect to the Admin Page:
 1. http://127.0.0.1:8000/admin
-2. Admin User Name: elizabeth
-3. Admin User Password: victoria@1006
+2. Admin User Name: **elizabeth**
+3. Admin User Password: **victoria@1006**
 
 #### Connection to the different Pages:
 1. Home page: http://127.0.0.1:8000/
