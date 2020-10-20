@@ -11,6 +11,7 @@ from .models import *
 admin.site.register(Customer)
 admin.site.register(Magazine)
 admin.site.register(Portfolio)
+admin.site.register(Tag)
 
 class CustomerAdmin(admin.ModelAdmin):
     list_display = ("id", "name", "email", "data_created")

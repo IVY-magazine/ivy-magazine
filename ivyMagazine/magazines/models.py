@@ -2,13 +2,22 @@ from django.db import models
 
 # Create your models here.
 
+class Tag(models.Model):
+    name = models.CharField(max_length=200, null =True)
+
+    def __str__(self):
+        return self.name    
+
 class Customer(models.Model):
     name = models.CharField(max_length=200, null =True)
     email = models.CharField(max_length=200, null =True)
     data_created = models.DateTimeField(auto_now_add=True, null =True)
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.name
+
+ 
 
 class Magazine(models.Model):
     CATEGORY = (
@@ -23,6 +32,7 @@ class Magazine(models.Model):
     description = models.CharField(max_length=300, null =True) #blank=True
     pdf = models.FileField(null =True, blank = True)
     date_created = models.DateTimeField(auto_now_add=True, null =True)
+    
 
     def save(self, *args, **kwargs):
         super(Magazine, self).save(*args, **kwargs)

@@ -18,8 +18,8 @@ def portfolio(request):
     return render(request, 'magazines/portfolio.html', context) 
 
 def magazine(request):
-    context = {}
-    return render(request, 'magazines/magazine.html', context)
+    magazines = Magazine.objects.all()
+    return render(request, 'magazines/magazine.html', {'magazines': magazines})
 
 def aboutUs(request):
     context = {}
