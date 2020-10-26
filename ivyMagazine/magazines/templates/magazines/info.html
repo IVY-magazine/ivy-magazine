@@ -16,7 +16,7 @@
             USER NAME
           </th>
           <th style="text-align: left; margin-left: 10rem;">
-            Alex
+            {{request.user}}
           </th>
         </tr>
         <tr>
@@ -24,7 +24,7 @@
             USER EMAIL
           </th>
           <th style="text-align: left; margin-left: 10rem;">
-            alex@sunykorea.ac.kr
+            {{request.user.email}}
           </th>
         </tr>
       </table>

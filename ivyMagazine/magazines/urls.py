@@ -4,8 +4,13 @@ from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
+    path('register/', views.registerPage, name="register"),
+	path('login/', views.loginPage, name="login"), 
+    path('logout/', views.logoutUser, name="logout"), 
+
+
     path('', views.home, name="home"),
-    path('loginHome/', views.loginHome, name="login"),
+    path('loginHome/', views.loginHome, name="logn"),
     path('blog/', views.blog, name="blog"),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('magazine/', views.magazine, name="magazine"),
