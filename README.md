@@ -49,3 +49,16 @@ This web application will provide **IVY** four major features. The administrator
 11. Customer Management & Number of Visits Graph: http://127.0.0.1:8000/admin/magazines/customer/
 12. Create Update Delete Magazine: http://127.0.0.1:8000/admin/magazines/magazine/
 13. Create Update Delete Portfolio: http://127.0.0.1:8000/admin/magazines/portfolio/
+
+### Operating System Requirements:
+1. Windows10
+2. MacOS (Catalina10.15.7)
+
+#### Both Operating Systems can run with the instruction above.
+
+### To report a bug or check for existing bugs:
+   + Click on the “Issues” tab on the top left corner of the Github page.
+     - A list of existing bugs will be displayed, whose details can be viewed once clicked.
+   + To report a new bug, click on the green “New issue” button on the top right corner of the page.
+     - The following page will display a form that requires you to fill in the title of bug and comments about the bug.
+     - Once all necessary fields are filled in, click on the green “Submit new issue” button on the  bottom right corner of the form.
