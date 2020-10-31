@@ -17,42 +17,78 @@
   </div>
   <main>
     <div class="content">
-      <div>
+      {% for i in magazine %}
+      {% if forloop.first %}
+      <div id = "magazines" class = "magazine active">
         <h1 class="heading">
-            SPRING 2020
+            {{i.name}}
         </h1>
         <p class="mDescription">
-          The theme of IVY's Spring 2020 Magazine
-          was <br> "Awaken Your Passion," inspired by the
-          hard work <br> and dedication our members put
-          into creating this issue,
+          {{i.description}}
+        </p>
+        <p class="mDescription">
+            Features include: Wild College Kids x MSC photoshoot, <br />
+            interviews with professors, alumni, and students, <br />
+            and special articles. 
+        </p>
+        <span class="button">
+        <span class="btn" onclick="viewMagazine()" type="button">View Magazine</span>
+      
+        </span>
+      </div>
+      {% else %}
+      <div id = "magazines" class = "magazine">
+        <h1 class="heading">
+            {{i.name}}
+        </h1>
+        <p class="mDescription">
+          {{i.description}}
         </p>
         <p class="mDescription">
             Features include: Wild College Kids x MSC photoshoot, <br />
             interviews with professors, alumni, and students, <br />
             and special articles.
         </p>
-        <div class="button">
-        <div class="btn" onclick="viewMagazine()" type="button">View Magazine</div>
-        </div>
-    </div>
-    </div>
-    <div class="wrapper">
-      <div class="images">
-        <div class="image"></div>
-        <div class="image"></div>
-        <div class="image"></div>
-        <div class="image"></div>
+        <span class="button">
+        <span class="btn" onclick="viewMagazine()" type="button">View Magazine</span>
+      
+        </span>
       </div>
+      {% endif %}
+      {% endfor %}
     </div>
+    <div class="imageBox">
+      {% for i in magazine %}
+      {% if forloop.first %}
+      <div class = "images active">
+        <img src = "{{i.thumbNail.url}}">
+      </div>
+      {% else %}
+      <div class = "images">
+        <img src = "{{i.thumbNail.url}}">
+      </div>
+      {%endif%}
+      {% endfor %}
+    </div>
+    <!-- <div class="wrapper">
+      <div class="images">
+        {% for i in magazine %}
+        {% if forloop.first%}
+         <div class="image active" ></div>
+         {% else %}
+         <div class="image" ></div>
+         {% endif %}
+         {% endfor %}
+      </div>
+    </div> -->
     <div class="navigation">
-      <div onClick="right()" class="right">
+      <div onClick="right(); rightImg()" class="right">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" />
           <polyline points="9 6 15 12 9 18" />
         </svg>
       </div>
-      <div onClick="left()" class="left">
+      <div onClick="left(); leftImg()" class="left">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-left" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" />
           <polyline points="15 6 9 12 15 18" />

@@ -19,15 +19,20 @@ This web application will provide **IVY** four major features. The administrator
 
 ### IVY Magazine Connection
 
+#### Set up
+1. In order to set the envionment, users must intall Python: https://www.python.org/downloads/
+2. After the installation, user must intall Django: https://docs.djangoproject.com/en/3.1/topics/install/
+3. Download the file from the Github page: https://github.com/IVY-magazine/ivy-magazine
+
 #### Connect to the Server:
-1. Go into ivyMagazine folder where manage.py file is located.
+1. After downloading the file, open the file with IDE and go into **ivyMagazine folder** where **manage.py** file is located.
 2. In the terminal type: **python manage.py runserver**
 3. Server connects to local address (http://127.0.0.1:8000/)
 
 #### Connect to the Admin Page:
 1. http://127.0.0.1:8000/admin
-2. Admin User Name: elizabeth
-3. Admin User Password: victoria@1006
+2. Admin User Name: **elizabeth**
+3. Admin User Password: **victoria@1006**
 
 #### Connection to the different Pages:
 1. Home page: http://127.0.0.1:8000/
@@ -44,3 +49,16 @@ This web application will provide **IVY** four major features. The administrator
 11. Customer Management & Number of Visits Graph: http://127.0.0.1:8000/admin/magazines/customer/
 12. Create Update Delete Magazine: http://127.0.0.1:8000/admin/magazines/magazine/
 13. Create Update Delete Portfolio: http://127.0.0.1:8000/admin/magazines/portfolio/
+
+### Operating System Requirements:
+1. Windows10
+2. MacOS (Catalina10.15.7)
+
+#### Both Operating Systems can run with the instruction above.
+
+### To report a bug or check for existing bugs:
+   + Click on the “Issues” tab on the top left corner of the Github page.
+     - A list of existing bugs will be displayed, whose details can be viewed once clicked.
+   + To report a new bug, click on the green “New issue” button on the top right corner of the page.
+     - The following page will display a form that requires you to fill in the title of bug and comments about the bug.
+     - Once all necessary fields are filled in, click on the green “Submit new issue” button on the  bottom right corner of the form.

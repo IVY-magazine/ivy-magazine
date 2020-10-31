@@ -144,8 +144,8 @@ main {
 }
 
 .image:nth-child(1) {
-  background: url("/static/images/s2020.png")
-    no-repeat 50% 50% / cover;
+  background: url("/static/images/s2020.png") 
+  no-repeat 50% 50% / cover;
 }
 
 .image:nth-child(2) {
@@ -165,6 +165,7 @@ main {
 
 .navigation .right,
 .navigation .left {
+  position: relative;
   height: 60px;
   width: 60px;
   border: 1px solid #333;
@@ -207,4 +208,22 @@ main {
 .colored-backgrounds {
   -webkit-transition-delay: 150ms;
   transition-delay: 150ms;
+}
+.content div.active{
+  opacity: 1;
+}
+.content div{
+  position: absolute;
+  object-fit:cover;
+  transition: 0.5s;
+  opacity: 0;
+}
+.imageBox div{
+  display:none;
+  
+  right:0;
+}
+.imageBox div.active{
+  display: block;
+
 }

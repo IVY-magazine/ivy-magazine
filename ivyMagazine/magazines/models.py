@@ -2,31 +2,38 @@ from django.db import models
 
 # Create your models here.
 
+class Tag(models.Model):
+    name = models.CharField(max_length=200, null =True)
+
+    def __str__(self):
+        return self.name    
+
 class Customer(models.Model):
     name = models.CharField(max_length=200, null =True)
     email = models.CharField(max_length=200, null =True)
     data_created = models.DateTimeField(auto_now_add=True, null =True)
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.name
 
+ 
+
 class Magazine(models.Model):
-    CATEGORY = (
-        ('Spring2019', 'Spring2019'),
-        ('Fall2019', 'Fall2019'),
-        ('Spring2020', 'Spring2020')
-    )
+   
 
     name = models.CharField(max_length=200, null =True)
     price = models.FloatField(null = True)
-    category = models.CharField(max_length=200, null =True, choices=CATEGORY)
+    # category = models.CharField(max_length=200, null =True, choices=CATEGORY)
     description = models.CharField(max_length=300, null =True) #blank=True
     pdf = models.FileField(null =True, blank = True)
+    thumbNail = models.FileField(null = True, blank = True)
     date_created = models.DateTimeField(auto_now_add=True, null =True)
 
     def save(self, *args, **kwargs):
         super(Magazine, self).save(*args, **kwargs)
         filename = self.pdf.url
+        thumbNailLink = self.thumbNail.url
 
     def __str__(self):
         return self.name
