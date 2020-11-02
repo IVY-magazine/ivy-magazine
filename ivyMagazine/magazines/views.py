@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 
 from django.contrib.auth.forms import UserCreationForm
@@ -69,8 +69,19 @@ def blog(request):
 
 @login_required(login_url = 'login')
 def portfolio(request):
-    context = {}
+    posts = Post.objects.all()
+    context = {'posts':posts}
     return render(request, 'magazines/portfolio.html', context) 
+
+def detail_view(request, id):
+    post = get_object_or_404(Post, id=id)
+    photos = PostImage.objects.filter(post=post)
+    context = {
+        'post':post,
+        'photos':photos
+    }
+    return render(request, 'magazines/detail.html', context)
+
 
 @login_required(login_url = 'login')
 def magazine(request):

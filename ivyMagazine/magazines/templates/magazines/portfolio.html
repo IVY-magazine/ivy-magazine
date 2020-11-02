@@ -7,59 +7,33 @@
         <div class = 'grid-container' style="height: 85.5vh;">
             <div class = 'col-7'>
                 <div class = "gallery-container">
-                    <div class="gallery">
-                        <a href="">
-                            <img src="{% static '/images/IVY.png' %}">
-                            <div class = "description">
-                                This is the description for the portfolio
-                            </div>
-                        </a>
-                    </div>
+                    {% if posts %}
+
+                        {% for post in posts %}
+                        <div class="gallery">
+                            <a href="{% url 'detail' post.id %}">
+                                <img src="{{post.image.url}}">
+                                <div class = "description">
+                                    {{post.title}}
+                                </div>
+                            </a>
+                        </div>
+                        
+                        {% endfor %}
+
+                    {% else %}
 
                     <div class="gallery">
-                        <a href="">
+                        Portfolio section is currently empty
+                        <!-- <a href="">
                             <img src="{% static '/images/IVY.png' %}">
                             <div class = "description">
                                 This is the description for the portfolio
                             </div>
-                        </a>
+                        </a> -->
                     </div>
-
-                    <div class="gallery">
-                        <a href="">
-                            <img src="{% static '/images/IVY.png' %}">
-                            <div class = "description">
-                                This is the description for the portfolio
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="gallery">
-                        <a href="">
-                            <img src="{% static '/images/IVY.png' %}">
-                            <div class = "description">
-                                This is the description for the portfolio
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="gallery">
-                        <a href="">
-                            <img src="{% static '/images/IVY.png' %}">
-                            <div class = "description">
-                                This is the description for the portfolio
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="gallery">
-                        <a href="">
-                            <img src="{% static '/images/IVY.png' %}">
-                            <div class = "description">
-                                This is the description for the portfolio
-                            </div>
-                        </a>
-                    </div>
+                    {% endif %}
+                    
                 </div> 
             </div>
             <div class = 'col-5'>

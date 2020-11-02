@@ -10,8 +10,8 @@ from .models import *
 
 admin.site.register(Customer)
 admin.site.register(Magazine)
-admin.site.register(Portfolio)
 admin.site.register(Tag)
+
 
 class CustomerAdmin(admin.ModelAdmin):
     list_display = ("id", "name", "email", "data_created")
@@ -33,3 +33,16 @@ class CustomerAdmin(admin.ModelAdmin):
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
 
+class PostImageAdmin(admin.StackedInline):
+    model = PostImage
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    inlines = [PostImageAdmin]
+
+    class Meta:
+       model = Post
+
+@admin.register(PostImage)
+class PostImageAdmin(admin.ModelAdmin):
+    pass
