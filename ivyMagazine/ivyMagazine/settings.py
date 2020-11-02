@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'magazines',
     'django_cleanup.apps.CleanupConfig',
-    
 ]
 
 MIDDLEWARE = [
