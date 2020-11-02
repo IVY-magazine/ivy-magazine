@@ -1,128 +1,168 @@
 {% extends 'magazines/main.html'%}
 {% load static %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/aboutUs.css' %}">
 
+<div class = 'grid-container'>
+    <div class = 'col-7'>
+        <div id='story-cont'>
+            <div id = 't1' class = 'row' style="width: 30vw;">
+                <p class = 'title'> OUR STORY</p>
+            </div>
+            <div id = "st1"  class = 'row' style="width: 30vw;">
+                <p class = 'subTitle'> Who we are</p>
+            </div>
+            <div id = 'ct1'  class = 'row' style="width: 30vw;">
+                <p class = 'contents'>
+                IVY Magazine Club was founded in Fall 2018 by two FIT 
+                students at SUNY Korea. The club brings together a diverse group 
+                of members across IGC to create dynamic editorials, interview students and 
+                professionals in the fashion industry, and capture campus life events. 
+                </p>
+                <p class = 'contents'>
+                Our goal is to put out high-quality, interesting, and fun content while giving 
+                our members an opportunity to explore their creative interests in fashion, photography, 
+                journalism, layout design, beauty, social media, and more!     
+                </p>
+            </div>
+            <!-- What's this for? -Martin 10/23<div style = "position:relative;top:30vh;"></div>-->
+            <div id = 'st2'  class = 'row' style="width: 30vw;">
+                <p class = 'subTitle'>What We Do</p>
+            </div>
+            <div id = 'ct2'  class = 'row' style="width: 30vw;">
+                <p class = 'contents'>
+                    In addition to a full-length magazine with 
+                    Editorial Photoshoots, Special Articles, and Interviews, 
+                    IVY is active on SNS, posting on a blog and Instagram. 
+                </p>
+                <p class = 'contents'>   
+                    Since 2018, we have done various projects, including 
+                    collaborations with up-and-coming Korean fashion designers, 
+                    Q&As with alumni in the industry, and features covering various 
+                    topics such as Seoul Fashion Week streetstyle. 
+                </p>
+                <p class = 'contents'>    
+                    All of IVY’s content is directed and produced entirely 
+                    by students, under the guidance of our faculty advisors. 
+                
+                </p>
+            </div>
+            <div class="row" style="width: 100%;margin-top: 30vh;margin-right: 0;margin-left:0; padding-top: 56.25%; height: 0px;position: relative; background-color: #FFD94F;">
+                <object type="text/html" width="100%" height="100%" data="//www.youtube.com/embed/XAW7MsAtjq8" id = 'video'>
+                </object>
+            </div>
+        </div>
+    </div>
+    <div class = 'col-5'>
+        <div class = "aboutPic">
+            <img src="../static/images/aboutPic.png" style="width:130%; height:130%;object-fit: contain;" alt=""> 
+        </div>
+        <div id = 'r1'>   
+            <div class='row' style="width: 30vw; left: 5vw;">
+                <p class = 'subTitle'>Recruitment</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut-state'>
+                    Interested in joining us?
+                </p> 
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut-state'>
+                    Various positions are available to all students from IGC!
+                </p>
+            </div>
 
-<div class = 'row' style="position: relative; height: 220vh">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/aboutUs.css' %}">
-    <div class = 'col-7' style = background-color:#FFD94E>
-        <div id = t1 style = "position: relative;height:5vh;left: 8vw;
-        top: 5vh;">
-            <p class = 'title' style ='font-size: 3.5rem;position: relative;
-            '>  OUR STORY</p>
-        </div>
-        <div id = "st1" style = " position: relative;height:5vh;left: 8vw;
-        top: 8vh;">
-            <p class = 'subTitle' style = 'font-size: 2.5rem;position: relative;
-            '> Who we are</p>
-        </div>
-        <div id = 'ct1' style = 'font-size: 1.2rem;position: relative; height:30vh;width: 20vw;left: 8vw;
-        top: 12vh;'>
-            <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>
-            IVY Magazine Club was founded in Fall 2018 by two FIT 
-            students at SUNY Korea. The club brings together a diverse group 
-            of members across IGC to create dynamic editorials, interview students and 
-            professionals in the fashion industry, and capture campus life events. 
-            </p>
-            <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>
-            Our goal is to put out high-quality, interesting, and fun content while giving 
-            our members an opportunity to explore their creative interests in fashion, photography, 
-            journalism, layout design, beauty, social media, and more!     
-            </p>
-        </div>
-        <div style = "position:relative;top:30vh;"></div>
-        <div id = 'st2' style = " position: relative;height:5vh;width: 20vw;left: 8vw;
-        top: 35vh;">
-            <p class = 'subTitle' style = 'font-size: 2.5rem;position: relative;'>What We Do</p>
-        </div>
-        <div id = 'ct2' style = " position: relative;height:5vh;width: 20vw;left: 8vw;
-        top: 40vh;">
-            <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>
-                In addition to a full-length magazine with 
-                Editorial Photoshoots, Special Articles, and Interviews, 
-                IVY is active on SNS, posting on a blog and Instagram. 
-            </p>
-            <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>   
-                Since 2018, we have done various projects, including 
-                collaborations with up-and-coming Korean fashion designers, 
-                Q&As with alumni in the industry, and features covering various 
-                topics such as Seoul Fashion Week streetstyle. 
-            </p>
-            <p class = 'contents' style = 'font-size: 1.2rem;position: relative;'>    
-                All of IVY’s content is directed and produced entirely 
-                by students, under the guidance of our faculty advisors. 
-            
-            </p>
-        </div>
-        <div id = 'video' class="video-container" style="text-align: left; margin-top: 2vh;left: 3vw;top:75vh; position:relative">
-            <object type="text/html" width="90%" height="500vh" data="//www.youtube.com/embed/XAW7MsAtjq8">
-        </object>
-    </div>
-    </div>
-    <div class = 'col-5' style = background-color:white> 
-        <div id = 'r1' style = "left: 3vw;top: 75vh;position:relative;">   
-            <p class = 'subTitle' style = 'font-size: 2.5rem;position: relative;'>Recruitment</p>
-            <p class = 'recrut-state' style = 'font-size: 1.7rem;position: relative;'>
-                Interested in joining us?
-            </p> 
-            <p class = 'recrut-state' style = 'font-size: 1.7rem;position: relative;'>
-                Various positions are available to all students from IGC!
-            </p>
             <br>
-            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;'>Writing Team</p>
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
-            Journalists 
-            </p>
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
-            Interviewers   
-            </p>
             <br>
-            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;' >Styling Team</p>
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
-            Stylists
-            </p>
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'> 
-            esigners
-            </p> 
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
-            Hair and Makeup Artists
-            </p>
+
+            <div class='row' style="width: 30vw;">
+                <p class = 'subsubTitle'>Writing Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Journalists 
+                </p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Interviewers   
+                </p>
+            </div>
+
             <br>
-            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;'>Layout Team</p>
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
-            Layout Designers
-            </p>
             <br>
-            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;'>Photography Team</p>
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
-            Editorial Photographers
-            </p> 
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
-            Portrait Photographers
-            </p> 
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'>
-            Article Photographers 
-            </p>
+
+            <div class="row" style="width: 30vw;">
+                <p class = 'subsubTitle'>Styling Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Stylists
+                </p>
+            </div>
+            <div class='row' style="width: 30vw;"> 
+                <p class = 'recrut'> 
+                Designers
+                </p> 
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Hair and Makeup Artists
+                </p>
+            </div>
+
             <br>
-            <p class = 'subsubTitle' style = 'font-size: 2.2rem;position: relative;'>Modeling Team</p>
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'> 
-            Editorial Models 
-            </p>
-            <p class = 'recrut' style = 'font-size: 1.1rem;position: relative;'> 
-            Influencer Models
-            </p>
-            <button id = 'contactbtn' type="button" class="btn btn-secondary btn-lg" style = 'font-size: 2.5rem;position: relative;'>Contact Us</button> 
+            <br>
+
+            <div class='row' style="width: 30vw;">
+                <p class = 'subsubTitle'>Layout Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'> Layout Designers</p>
+            </div>
+
+            <br>
+            <br>
+
+            <div class='row' style="width: 30vw;">
+                <p class = 'subsubTitle'>Photography Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Editorial Photographers
+                </p> 
+            </div>
+            <div class='row' style="width: 30vw;"> 
+                <p class = 'recrut'>
+                Portrait Photographers
+                </p> 
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Article Photographers 
+                </p>
+            </div>
+
+            <br>
+            <br>
+
+            <div class='row' style="width: 30vw;">
+                <p class = 'subsubTitle'>Modeling Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'> 
+                Editorial Models 
+                </p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'> 
+                Influencer Models
+                </p>
+            </div>
+            <div class='row' style="width: 30vw;">
+            <button id = 'contactbtn' type="button" class="btn btn-secondary btn-lg">Contact Us</button> 
+            </div>
         </div>
     </div>
-    
 </div>
-    <div class = "aboutPic" style="position: relative;width: 75vw;
-        height: 65vh;
-        left: 24vw;
-        top: -215vh; z-index:1">
-        <img style = 'height: 100%; width: 100%; object-fit: contain;' src="../static/images/aboutPic.png" alt=""> 
-    </div>
-    
-   
-
 {% endblock %}

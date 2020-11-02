@@ -1,13 +1,75 @@
-grid-container{
+.grid-container{
     display: grid;
     grid-template-rows: 1;
     background-color: #FFD94E;
+    height:108vh;
 }
 
-.navbar-block{
-    height: 20vh;
-    width: 100vw;
-    background-color: #343a40!important;
+.imgSec{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    position: relative;
+    top: -10vh;
+    left: 0.5vw;
+    position: relative;
+}
+
+.logoContainer{
+    padding: 3vw;
+}
+
+.logoImg{
+    width: 90%; 
+    height: 13vw; 
+    background-color: #FFD94E; 
+    mix-blend-mode: multiply;
+}
+
+.mainImg1{
+    position: relative;
+    width:35vw;
+    height: 43vh; 
+    top: 0vh; 
+    left: 0vw; 
+    z-index: 1;
+}
+
+.mainImg2{
+    position: relative; 
+    width:30vw; 
+    height:44vh; 
+    top: 0vh; 
+    left: 1vw; 
+    z-index: 1;
+}
+
+.mainImg3{
+    position: relative; 
+    width:49vw; 
+    height:60vh; 
+    top: 3vh; 
+    left: 0vw; 
+    z-index: 1;
+}
+
+.mainImg4{
+    position: relative; 
+    width:13vw; 
+    height:60vh; 
+    top: 3vh; 
+    left:2vw; 
+    z-index: 1;
+}
+
+.navBar{
+    height: 25vh;
+    margin-top: 1vw;
+}
+
+.scrollInd{
+    text-align: center; 
+    text-decoration: underline; 
+    margin-top: 10vh;
 }
 
 .textSec{
@@ -17,26 +79,12 @@ grid-container{
     padding: 2vw;
 }
 
-.imgSec{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    position: relative;
-    width: 70vw; 
-    top: -10vh;
-    left: 0vw;
-}
 
-.navBar{
-    height: 25vh;
-    margin-top: 1vw;
+a{
+    padding: 1vw;
 }
 
 p{
     width: 100%;
     text-align: center;
 }
-
-a{
-    padding: 1vw;
-}
-

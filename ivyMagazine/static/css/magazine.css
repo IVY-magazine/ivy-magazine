@@ -1,229 +1,190 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
-
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+body{
+    background-color: #FFFFFF;
+}
+.grid-container{
+    display: grid;
+    grid-template-rows: 1;
+    background-color: #FFFFFF;
+    height: fit-content
 }
 
-section {
-    font-family: 'Raleway', sans-serif;
+.aboutPic{
+    position:relative;
+    left: -10vw;
+    top: 2vh; 
+    z-index:1;
 }
 
-
-
-
-.heading {
-  font-family: "Playfair Display", serif;
-  text-align: center;
+.col-7{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    max-width: 100%;
+    background-color:#FFD94E;
+    padding: 0;
+    bottom: 0;
 }
 
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: calc(100vh - 5rem);
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 3.125rem;
+.col-5{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    max-width: 100%;
+    background-color:white;
+    padding: 0;
+    position: relative;
 }
 
-.wrapper {
-  overflow: hidden;
+.contents{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 23px;
+    text-align: left;
+    color: #000000;
+    position: relative;
 }
 
-.absolute-wrapper {
-  position: absolute;
-  overflow: hidden;
-  height: 100vh;
-  width: 60%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.recrut-state{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.7rem;
+    line-height: 28px;
+    text-align: left;
+    color: #000000;
+    position: relative;
+    top: 2vh;
+    left: 5vw;
 }
 
-.colored-backgrounds {
-  position: absolute;
-  height: inherit;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.recrut{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 28px;
+    text-align: left;
+    color: #000000;
+    position: relative;
+    left: 5vw;
 }
 
-.colored-backgrounds div {
-  width: 100%;
-  height: 100%;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+.row{
+    position: relative;
+    width: 100vw;
 }
 
-.colored-backgrounds div:nth-child(1) {
-  background-color: #FFD94E;
+.subTitle{
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: left;
+    color: #000000;
+    position: relative;
 }
 
-.colored-backgrounds div:nth-child(2) {
-  background-color: #adc1a8;
+.subsubTitle{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 28px;
+    text-align: left;
+    color: #000000;
+    position: relative;
+    left: 5vw;
+    background-color: #FFFFFF;
 }
 
-.colored-backgrounds div:nth-child(3) {
-  background-color: #d3d8d6;
+.title{
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-align: left;
+    color: #000000;
+    position: relative;
 }
 
-.colored-backgrounds div:nth-child(4) {
-  background-color: #d3ae99;
+#contactbtn{
+    width: 30vw;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #3D3D3D;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25rem;
+    line-height: 29px;
+    text-align: center; 
+    color: #000000;
+    font-size: 2.5rem;
+    left: 3vw;
+    position: relative;
 }
 
-.content {
-    
-    margin-bottom: 3rem;
-    margin-left:1rem;
-}
-.content h1 {
-  margin-bottom: 1rem;
-  font-size: 3.5rem;
-}
-
-.content p {
-  margin-bottom: 1.5rem;
-  font-family: 'Raleway', sans-serif;
+#ct1{
+    text-align: left;
+    font-size: 1.2rem;
+    position: relative; 
+    width: 30vw;
+    left: 5vw;
+    top: 12vh;
 }
 
-.content .button {
-  left:40%;
-  margin-top: 80px;
- 
-}
-.content .button .btn {
-  border: none;
-  background-color: #7bcc3c;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 1rem 2.5rem;
-  cursor: pointer;
-  margin-left:85px;
-  background-color: #E5E5E5;
-  border: 0.5px solid black;
-  
-
+#ct2{
+    width: 30vw;
+    left: 5vw;
+    top: 35vh;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
 }
 
-.content button:active {
-  -webkit-transform: scale(0.96);
-  transform: scale(0.96);
+#r1{
+    top: 8vh;
+    width: 41.5vw;
+    position:relative;
+    background-color: #FFFFFF;
 }
 
-.images {
-  width: 550px;
-  height: 690px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#t1{
+    overflow: visible;
+    position: relative;
+    left: 5vw;
+    top: 5vh;
 }
 
-.images .image {
-  height: 100%;
-  width: 100%;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+#st1{ 
+    overflow: visible;
+    position: relative;
+    left: 5vw;
+    top: 8vh;
 }
 
-.image:nth-child(1) {
-  background: url("/static/images/s2020.png") 
-  no-repeat 50% 50% / cover;
+#st2{
+    width: 30vw;
+    left: 5vw;
+    top: 30vh;
+    overflow: visible;
+    position: relative;
 }
 
-.image:nth-child(2) {
-  background: url("https://vikram-hegde.github.io/ui-animation/images/image2.png")
-    no-repeat 50% 50% / cover;
+#story-cont{
+    top: 10vh;
+    position: relative;
+    background-color: #FFD94F;
 }
 
-.image:nth-child(3) {
-  background: url("https://vikram-hegde.github.io/ui-animation/images/image3.png")
-    no-repeat 50% 50% / cover;
-}
-
-.image:nth-child(4) {
-  background: url("https://vikram-hegde.github.io/ui-animation/images/image4.png")
-    no-repeat 50% 50% / cover;
-}
-
-.navigation .right,
-.navigation .left {
-  position: relative;
-  height: 60px;
-  width: 60px;
-  border: 1px solid #333;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-.navigation .right:hover,
-.navigation .left:hover {
-  background-color: #333;
-  color: white;
-}
-
-.navigation .right:active,
-.navigation .left:active {
-  -webkit-transform: scale(0.96);
-  transform: scale(0.96);
-}
-
-.images,
-.colored-backgrounds {
-  -webkit-transition: -webkit-transform 0.35s
-    cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: -webkit-transform 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: transform 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: transform 0.35s cubic-bezier(0.39, 0.575, 0.565, 1),
-    -webkit-transform 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-.colored-backgrounds {
-  -webkit-transition-delay: 150ms;
-  transition-delay: 150ms;
-}
-.content div.active{
-  opacity: 1;
-}
-.content div{
-  position: absolute;
-  object-fit:cover;
-  transition: 0.5s;
-  opacity: 0;
-}
-.imageBox div{
-  display:none;
-  
-  right:0;
-}
-.imageBox div.active{
-  display: block;
-
+#video{
+    overflow: visible;
+    background-color: #FFD94E;
+    padding: 3vh;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }

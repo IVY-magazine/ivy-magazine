@@ -7,7 +7,7 @@ body{
     font-family: 'Playfair Display', serif;
 }
 
-body nav ul {
+/*body nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body nav ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
+  }*/
   
 
 body nav ul #sign_in{
@@ -41,7 +41,7 @@ body nav ul #sign_in{
    
   }
 
-section{
+/*section{
     position: relative;
    
     justify-content: center;
@@ -60,36 +60,35 @@ section::before
     width: 60%;
     height: 100%;
     background: #FFD94E;
-}
+}*/
 
-
-section .container
+/*section */.grid-container
 {
     position: relative;
-    min-width: 1100px;
-    min-height: 550px;
-  
+    display: grid;
+    grid-template-rows: 1;
+    background-color: #FFFFFF;
+    height: fit-content;
 }
 
-section .container .contactForm
+/*section */.grid-container .contactForm
 {
-    position: absolute;
-    top: 60px;
-    width: 50vw;
-    height: calc(100% - 300px);
+    width: 60vw;
+    height: /*calc(100% - 300px)*/fit-content;
     z-index: 1;
     page-break-after: 40px;
-    padding: 40px;
+    padding: 5vw;
+    padding-top: 11vh;
     justify-content: space-between;
-    
-    margin-left: 30px;
-
+    background-color: #FFD94E;
+    grid-column-start: 1;
+    grid-column-end: 1;
 }
 
-section .container .contactForm h2
+/*section */.grid-container .contactForm h2
 {
     color: #000000;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 500;
     text-transform: uppercase;
     font-weight: 1000;
@@ -99,7 +98,7 @@ section .container .contactForm h2
     margin-bottom: 50px;
 }
 
-section .container .contactForm .formBox
+/*section */.grid-container .contactForm .formBox
 {
     position: relative;
     text-align: center; 
@@ -107,27 +106,26 @@ section .container .contactForm .formBox
     margin-top: -20px;
 }
 
-section .container .contactForm .formBox .inputBox
+/*section */.grid-container .contactForm .formBox .inputBox
 {
     position: relative;
     margin: 0 0 1px 0;
 }
 
-
-section .container .contactForm .formBox .inputBox .formInfo
+/*section */.grid-container .contactForm .formBox .inputBox .formInfo
 {
     position: relative;
     margin: 30px;
-    font-size: 15px;
+    font-size: 0.9rem;
     text-align: left;
-    margin-left: 100px;
+    margin-left: 7vw;
     font-family: 'Raleway', serif;
     font-weight: 10000;
     opacity: 70%;
 }
 
-section .container .contactForm .formBox .inputBox input[type="text"],
-section .container .contactForm .formBox .inputBox textarea
+/*section */.grid-container .contactForm .formBox .inputBox input[type="text"],
+/*section */.grid-container .contactForm .formBox .inputBox textarea
 {
     position: relative;
   
@@ -142,12 +140,12 @@ section .container .contactForm .formBox .inputBox textarea
     background: #FFD94E;
 }
 
-section .container .contactForm .formBox .inputBox input[type="text"]
+/*section */.grid-container .contactForm .formBox .inputBox input[type="text"]
 {
     margin-top: -100px;
 }
 
-section .container .contactForm .formBox .inputBox textarea
+/*section */.grid-container .contactForm .formBox .inputBox textarea
 {
     border: 1px solid #777;
     height: 12vh;
@@ -156,7 +154,7 @@ section .container .contactForm .formBox .inputBox textarea
  
 }
 
-section .container .contactForm .formBox .inputBox input[type="submit"]
+/*section */.grid-container .contactForm .formBox .inputBox input[type="submit"]
 {
     position: relative;
     cursor: pointer;
@@ -171,29 +169,29 @@ section .container .contactForm .formBox .inputBox input[type="submit"]
 
 }
 
-section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
+/*section */.grid-container .contactForm .formBox .inputBox input[type="submit"]:hover{
     background: #333;
     color: #FFD94E;
 }
 
 
-
-section .container .purchaseForm 
+/*section*/ .grid-container .purchaseForm 
 {
     position: relative;
-
-  
     width: 40vw;
-    height: 20px;
+    height: fit-content;
     float:right;
-    top: 43px;
-    
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background-color: #FFFFFF;
+    padding-top: 8vh;
+    padding-left: 2vw;
 }
 
-section .container .purchaseForm h2
+/*section */.grid-container .purchaseForm h2
 {
     color: #000000;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 500;
     text-transform: uppercase;
     font-weight: 1000;
@@ -202,7 +200,7 @@ section .container .purchaseForm h2
     margin-bottom: 70px;
 }
 
-section .container .purchaseForm .formBox
+/*section */.grid-container .purchaseForm .formBox
 {
     position: relative;
     text-align: center; 
@@ -210,57 +208,55 @@ section .container .purchaseForm .formBox
     margin-top: -20px;
 }
 
-section .container .purchaseForm .formBox .inputBox
+/*section */.grid-container .purchaseForm .formBox .inputBox
 {
     position: relative;
     margin: 0 0 1px 0;
 }
 
-section .container .purchaseForm .formBox .inputBox input[type="text"]
+/*section */.grid-container .purchaseForm .formBox .inputBox input[type="text"]
 {
     margin-top: -100px;
 }
 
-
-section .container .purchaseForm .formBox .inputBox .formInfo
+/*section */.grid-container .purchaseForm .formBox .inputBox .formInfo
 {
     position: relative;
     margin: 30px;
-    font-size: 15px;
+    font-size: 0.9rem;
     text-align: left;
-    margin-left: 100px;
+    margin-left: 7vw;
     font-family: 'Raleway', serif;
     font-weight: 10000;
     opacity: 70%;
 }
 
-section .container .purchaseForm .formBox .inputBox .checkTable{
-    position: relative;
-    text-align: center;
+/*section */.grid-container .purchaseForm .formBox .inputBox .checkTable{
     position: relative;
     margin: 30px;
-    font-size: 15px;
+    font-size: 0.9rem;
     text-align: left;
-    margin-left: 150px;
+    margin-left: 5vw;
     font-family: 'Raleway', serif;
     font-weight: 10000;
     opacity: 70%; 
+    left: 5vw;
 }
 
-
-section .container .purchaseForm .formBox .inputBox .mOption{
+/*section */.grid-container .purchaseForm .formBox .inputBox .mOption{
     position: relative;
-    margin: 30px;
+    margin: 0;
     font-size: 15px;
     text-align: left;
-    margin-right: 100px;
+    margin-right: 10vw;
     font-family: 'Raleway', serif;
     font-weight: 10000;
     opacity: 70%;
+    width: 20vw;
 }
 
-section .container .purchaseForm .formBox .inputBox input[type="text"],
-section .container .purchaseForm .formBox .inputBox textarea
+/*section */.grid-container .purchaseForm .formBox .inputBox input[type="text"],
+/*section */.grid-container .purchaseForm .formBox .inputBox textarea
 {
     position: relative;
   
@@ -275,7 +271,7 @@ section .container .purchaseForm .formBox .inputBox textarea
     background: #ffffff;
 }
 
-section .container .purchaseForm .formBox .inputBox input[type="submit"]
+/*section */.grid-container .purchaseForm .formBox .inputBox input[type="submit"]
 {
     position: relative;
     cursor: pointer;
@@ -290,8 +286,7 @@ section .container .purchaseForm .formBox .inputBox input[type="submit"]
 
 }
 
-section .container .purchaseForm .formBox .inputBox input[type="submit"]:hover{
+/*section */.grid-container .purchaseForm .formBox .inputBox input[type="submit"]:hover{
     background: #333;
     color: #E5E5E5;
 }
-

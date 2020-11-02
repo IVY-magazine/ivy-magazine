@@ -2,21 +2,22 @@
 <link rel="stylesheet" type="text/css" href="{% static '/css/navbar.css' %}">
 
 <nav>
-    <div>
-    <ul >
-        <li><img src = '../static/images/ivyLogo.jpg'/></li>
-            <li><a class="nav-link" href="{% url 'home' %}">HOME</a></li>
-            <li><a class="nav-link" href="{% url 'blog' %}">BLOG</a></li>
-            <li><a class="nav-link" href="{% url 'portfolio' %}">PORTFOLIO</a></li>
-            <li><a class="nav-link" href="{% url 'magazine' %}">MAGAZINE</a></li>
-            <li><a class="nav-link" href="{% url 'aboutUs' %}">ABOUT US</a></li>
-            <li><a class="nav-link" href="{% url 'contactUs' %}">CONTACT US</a></li>
-            <li id="sign_in"><a  class="nav-link" href="{% url 'login' %}">SIGN IN</a></li>
-      </ul>
+    <div class = "grid-containerNav">
+      <img src = '../static/images/ivyLogo.jpg' class="imgPic"/>
+      <a class="nav-link1" id="nav-txt" href="{% url 'home' %}">HOME</a>
+      <a class="nav-link2" id="nav-txt" href="{% url 'blog' %}">BLOG</a>
+      <a class="nav-link3" id="nav-txt" href="{% url 'portfolio' %}">PORTFOLIO</a>
+      <a class="nav-link4" id="nav-txt" href="{% url 'magazine' %}">MAGAZINE</a>
+      <a class="nav-link5" id="nav-txt" href="{% url 'aboutUs' %}">ABOUT US</a>
+      <a class="nav-link6" id="nav-txt" href="{% url 'contactUs' %}">CONTACT US</a>
+      <a  class="nav-link7" id="nav-txt" href="{% url 'login' %}" id="sign_in">SIGN IN</a>
+      <div class="hello-msg">
+        <span class="hello-txt">Hello, {{request.user}}</span>
+        <div style="margin:2px;max-width:30vw;">
+          <span class="log-txt" style="padding-left:1vw;"><a href= "{% url 'logout' %}">Logout</a></span>
+          <span class="log-txt"><a href= "{% url 'info' %}">MYInfo</a></span>
+        </div>
+      </div>
     </div>
-      <span class = "hello-msg">Hello, {{request.user}}</span>
-      <span><a class = "hello-msg" href= "{% url 'logout' %}">Logout</a></span>
-      <span><a class = "hello-msg" href= "{% url 'info' %}">MYInfo</a></span>
-
   
 </nav>

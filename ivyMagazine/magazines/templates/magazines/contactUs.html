@@ -1,39 +1,13 @@
+{% extends 'magazines/main.html'%}
 
 {% load static %}
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block content%}
     <link rel="stylesheet" type="text/css" href="{% static '/css/contactUs.css' %}">
-    <title>IVY magazine</title>
     
-</head>
-
-
-<body>
-    <nav>
-        <ul >
-            <li><img src = '../static/images/ivyLogo.jpg'/></li>
-                <li><a class="nav-link" href="{% url 'home' %}">HOME</a></li>
-                <li><a class="nav-link" href="{% url 'blog' %}">BLOG</a></li>
-                <li><a class="nav-link" href="{% url 'portfolio' %}">PORTFOLIO</a></li>
-                <li><a class="nav-link" href="{% url 'magazine' %}">MAGAZINE</a></li>
-                <li><a class="nav-link" href="{% url 'aboutUs' %}">ABOUT US</a></li>
-                <li><a class="nav-link" href="{% url 'contactUs' %}">CONTACT US</a></li>
-                <li id="sign_in"><a  class="nav-link" href="{% url 'login' %}">SIGN IN</a></li>
-          </ul>
-          <span class = "hello-msg">Hello, {{request.user}}</span>
-          <span><a class = "hello-msg" href= "{% url 'logout' %}">Logout</a></span>    
-          <span><a class = "hello-msg" href= "{% url 'info' %}">MYInfo</a></span>
-
-    </nav>
-    <section>
-        <div class="container">
-            <div class="contactForm">
-                <h2>Contact Us</h2>
+    <div class="grid-container">
+        <div class="contactForm">
+            <h2>Contact Us</h2>
                 <form class="formBox">
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div><br>
@@ -59,9 +33,9 @@
                         <input type="submit" value="Send a message">
                     </div>
                 </form>
-            </div>
-            <div class="purchaseForm">
-                <h2>Purchase Magazine</h2>
+        </div>
+        <div class="purchaseForm">
+            <h2>Purchase Magazine</h2>
                 <form class="formBox">
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div>
@@ -127,25 +101,10 @@
                                 </tr>
                             </tbody>
                         </table>
-                        
-                        
-                        
-                        
-                        
-                   
-                       
-                        
-                       
-                        
-                    </div>
-
-                    <div class="inputBox w100">
-                        <input type="submit" value="Request subscription">
-                    </div>
-                </form>
-            </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Request subscription">
+                        </div>
+                    </form>
         </div>
-    </section>
-</body>
-</html>
-
+    </div>
+    {% endblock %}
