@@ -25,6 +25,16 @@ SECRET_KEY = 'ej_q4hpb6jl3*lf8@rx=e((n3&@14jxp2at4s087dr$w4jnq22'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #######################################Change made from True to False
 
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''# from email
+EMAIL_HOST_PASSWORD = ''# from email password
+
+ 
+
 ALLOWED_HOSTS = ['*']  ###############################Change made from blank [] to [*]
 
 
@@ -127,3 +137,4 @@ MEDIA_URL ='/images/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-
+from django.core.mail import send_mail
+from django.conf import settings
 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -94,6 +95,23 @@ def aboutUs(request):
     return render(request, 'magazines/aboutUs.html', context)
 
 def contactUs(request):
+    if request.method == 'POST':
+        message_name = request.POST["message-name"]
+        message_email = request.POST["message-email"]
+        message_subject = request.POST["message-subject"]
+        message_info = request.POST["message-info"]
+
+        
+        message_content = 'Subject: ' + message_subject + '\nUser Name: ' + message_name + '\nUser Email: ' + message_email + '\nMessage: ' + message_info
+        print(message_content)                    
+        # send an email
+        send_mail(
+            'IVY Contact Us message sent by ' + message_name, # subject
+            message_content,                   # message
+            settings.EMAIL_HOST_USER,          # from email
+            ['']       # to email
+        
+        )
     context = {}
     return render(request, 'magazines/contactUs.html', context)
 

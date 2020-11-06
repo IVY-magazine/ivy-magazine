@@ -8,35 +8,37 @@
     <div class="grid-container">
         <div class="contactForm">
             <h2>Contact Us</h2>
-                <form class="formBox">
+                <form method="post" class="formBox" action={% url 'contactUs'%} >
+                    {% csrf_token %}
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div><br>
-                        <input type="text" name="" required>
+                        <input type="text" name="message-name" required>
                         
                     </div>
                     <div class="inputBox">
                         <div class="formInfo">Your Email:</div><br>
-                        <input type="text" name="" required>
+                        <input type="text" name="message-email" required>
                         
                     </div>
                     <div class="inputBox">
                         <div class="formInfo">Subject:</div><br>
-                        <input type="text" name="" required>
+                        <input type="text" name="message-subject" required>
                         
                     </div>
                     <div class="inputBox">
                         <div class="formInfo"> Message:</div><br>
-                        <textarea name=""  required></textarea>
+                        <textarea name="message-info" required></textarea>
                         
                     </div>
                     <div class="inputBox">
-                        <input type="submit" value="Send a message">
+                        <input type="submit" value="Send a message"/>
                     </div>
                 </form>
         </div>
         <div class="purchaseForm">
             <h2>Purchase Magazine</h2>
-                <form class="formBox">
+                <form method="POST" class="formBox">
+                    {% csrf_token %}
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div>
                         <input type="text" name="" required>
