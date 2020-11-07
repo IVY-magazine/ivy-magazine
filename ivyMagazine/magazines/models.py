@@ -58,6 +58,7 @@ from django.db import models
 class Post(models.Model):
     title = models.CharField(max_length=250)
     description = models.TextField()
+    involvedEditor = models.TextField(blank=True)
     image = models.FileField(blank=True)
     date_created = models.DateTimeField(auto_now_add=True, null =True)
     viewcount = models.PositiveIntegerField(default=0)
