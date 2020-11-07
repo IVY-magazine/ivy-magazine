@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
     <title>IVY magazine</title>
+
+    <script type="text/javascript">
+        // F12
+        $(document).ready(function(){
+            $(document).bind('keydown',function(e){
+                if ( e.keyCode == 123 /* F12 */) {
+                    e.preventDefault();
+                    e.returnValue = false;
+                }
+            });
+        });
+        
+        // right click
+        document.onmousedown=disableclick;
+        status="Right click is not available.";
+        
+        function disableclick(event){
+            if (event.button==2) {
+                alert(status);
+                return false;
+            }
+        }
+    </script>
     
 </head>
 <body>
