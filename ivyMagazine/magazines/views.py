@@ -72,7 +72,19 @@ def blog(request):
 
 @login_required(login_url = 'login')
 def portfolio(request):
-    posts = Post.objects.all()
+
+    sort = request.GET.get('sort','')
+    print(sort)
+
+    if sort == 'date':
+        posts = Post.objects.order_by('-date_created')
+    elif sort == 'title':
+        posts = Post.objects.order_by('title')
+    elif sort == 'mostView':
+        posts = Post.objects.order_by('-viewcount')
+    else:
+        posts = Post.objects.all()
+
     context = {'posts':posts}
     return render(request, 'magazines/portfolio.html', context) 
 

@@ -4,8 +4,18 @@
 
 <main id = "main" role = "main">
     <link rel="stylesheet" type="text/css" href="{% static '/css/portfolio.css' %}">
+    
         <div class = 'grid-container' style="height: 85.5vh;">
+            
+            
             <div class = 'col-7'>
+
+                <select id="sort-select" onchange="location = this.value;">
+                    <option class="sort-default" hidden>SORT BY</option>
+                    <option class="sort-date" value="?sort=date">DATE(recent)</option>
+                    <option class="sort-title" value="?sort=title">TITLE(alphabetical)</option>
+                    <option class="sort-mostView" value="?sort=mostView">MOST VIEW</option>
+                  </select>
                 <div class = "gallery-container">
                     {% if posts %}
 
@@ -55,6 +65,35 @@
                 </div>
             </div>
         </div>
+        <script type='text/javascript'> 
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            };
+            // 정렬방식 셀렉트 박스 유지
+            $(document).ready(function(){
+                var sort = getUrlParameter('sort');
+                if(sort == 'date'){
+                    $('.sort-date').prop('selected', 'selected')
+                }else if(sort == 'title'){
+                    $('.sort-title').prop('selected', 'selected')
+                }else if(sort == 'mostView'){
+                    $('.sort-mostView').prop('selected', 'selected')
+                }else{
+                    $('.sort-default').prop('selected', 'selected')
+                }
+            });
+            </script>
 </main>
 
 {% endblock %}
