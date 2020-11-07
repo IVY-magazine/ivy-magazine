@@ -1,60 +1,45 @@
 {% extends "admin/change_list.html" %}
 {% load static %}
-
 <!-- Override extrahead to add Chart.js -->
 {% block extrahead %}
 {{ block.super }}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-{{ chart_data|json_script:"chart-data" }}
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const ctx = document.getElementById('myChart').getContext('2d');
+  
+  x_axis_value = [];
+  y_axis_value = [];
 
-  // Sample data
-  const chartData = [
-    {"date": "2020-09-08T00:00:00Z", "y": 3},
-    {"date": "2020-09-07T00:00:00Z", "y": 10},
-    {"date": "2020-09-06T00:00:00Z", "y": 15},
-    {"date": "2020-09-05T00:00:00Z", "y": 4},
-    {"date": "2020-09-03T00:00:00Z", "y": 2},
-    {"date": "2020-09-04T00:00:00Z", "y": 11},
-    {"date": "2020-09-02T00:00:00Z", "y": 3},
-    {"date": "2020-09-01T00:00:00Z", "y": 2},
-  ];
+  function myFunction(item, index) {
+      console.log(item)
+    x_axis_value.push(item.title);
+    y_axis_value.push(item.viewcount);
+  }
 
-  // Parse the dates to JS
-  chartData.forEach((d) => {
-    d.x = new Date(d.date);
-  });
+  const chartData = {{ chart_data | safe }};
+  chartData.forEach(myFunction);
 
   // Render the chart
   const chart = new Chart(ctx, {
     type: 'bar',
     data: {
+        labels: x_axis_value,
       datasets: [
         {
-          label: 'Number of Viewers',
-          data: chartData,
-          backgroundColor: 'rgba(220,20,20,0.5)',
+          label: 'Number of viewers',
+          data: y_axis_value,
+          backgroundColor: 'rgba(54,162,235,0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1,
         },
       ],
     },
     options: {
       responsive: true,
       scales: {
-        xAxes: [
-          {
-            type: 'time',
-            time: {
-              unit: 'day',
-              round: 'day',
-              displayFormats: {
-                day: 'MMM D',
-              },
-            },
-          },
-        ],
+
         yAxes: [
           {
             ticks: {

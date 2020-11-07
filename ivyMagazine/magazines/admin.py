@@ -38,6 +38,20 @@ class PostImageAdmin(admin.StackedInline):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+    list_display = ("id", "title", "date_created", "viewcount") 
+    ordering = ("-date_created",)
+
+    def changelist_view(self, request, extra_context=None):
+        chart_data = (
+            Post.objects.values('title', 'viewcount')
+        )
+
+        # Serialize and attach the chart data to the template context
+        as_json = json.dumps(list(chart_data), cls=DjangoJSONEncoder)
+        extra_context = extra_context or {"chart_data": as_json}
+
+        # Call the superclass changelist_view to render the page
+        return super().changelist_view(request, extra_context=extra_context)
     inlines = [PostImageAdmin]
 
     class Meta:
