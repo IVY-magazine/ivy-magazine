@@ -92,6 +92,10 @@ def magazine(request):
     magazine = sorted(magazine,key = lambda x : x.date_created)
     return render(request, 'magazines/magazine.html', {'magazine':magazine})
 
+def viewMagazine(request,pk):
+    magazine = Magazine.objects.get(id=pk)
+    return render(request, 'magazines/viewMagazine.html', {'magazine':magazine})
+    
 def aboutUs(request):
     context = {}
     return render(request, 'magazines/aboutUs.html', context)

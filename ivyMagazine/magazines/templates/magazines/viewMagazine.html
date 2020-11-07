@@ -1,0 +1,14 @@
+{% extends 'magazines/main.html'%}
+{% load static %}
+{% block content %}
+<section>
+<link rel="stylesheet" href="{% static 'pdf.js-2.5.207-dist/web/viewer.css'%}">
+<script src="js/jquery.min.js"></script>
+<iframe src="{{magazine.pdf.url}}"  type="application/pdf" width="100%" height="800px" allowfullscreen></iframe>
+
+
+
+
+
+</section>
+{% endblock %}
