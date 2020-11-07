@@ -23,7 +23,7 @@ body{
     background-color:#FFD94E;
     padding: 0;
     bottom: 0;
-    height: fit-content;
+    height: 105%;
 }
 
 .col-5{
@@ -32,6 +32,7 @@ body{
     max-width: 100%;
     background-color:white;
     padding: 0;
+    margin-left: 5vw;
     position: relative;
 }
 
@@ -50,13 +51,15 @@ body{
     font-family: Raleway;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     line-height: 28px;
     text-align: left;
     color: #000000;
     position: relative;
     top: 2vh;
     left: 5vw;
+    padding-bottom: 1vh;
+    margin-right: 0;
 }
 
 .recrut{
@@ -64,16 +67,21 @@ body{
     font-style: normal;
     font-weight: normal;
     font-size: 1.1rem;
+    text-align: center;
+    justify-content: center;
     line-height: 28px;
-    text-align: left;
     color: #000000;
     position: relative;
-    left: 5vw;
+    left: 20vw;
+    margin: 0;
+    padding: 0;
 }
 
 .row{
     position: relative;
     width: 100vw;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 .subTitle{
@@ -87,16 +95,19 @@ body{
 }
 
 .subsubTitle{
-    font-family: Raleway;
+    font-family: Playfair Display;
     font-style: normal;
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     line-height: 28px;
     text-align: left;
     color: #000000;
     position: relative;
+    top: 2vh;
     left: 5vw;
+    padding-bottom: 3vh;
     background-color: #FFFFFF;
+    margin: 0; 
 }
 
 .title{
@@ -116,7 +127,7 @@ body{
     border: 1px solid #3D3D3D;
     box-sizing: border-box;
     border-radius: 30px;
-    font-family: Raleway;
+    font-family: Raleway ,serif;
     font-style: normal;
     font-weight: normal;
     font-size: 25rem;
@@ -124,8 +135,10 @@ body{
     text-align: center; 
     color: #000000;
     font-size: 2.5rem;
-    left: 3vw;
+    left: 15vw;
     position: relative;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
 }
 
 #ct1{
@@ -140,7 +153,7 @@ body{
 #ct2{
     width: 30vw;
     left: 5vw;
-    top: 35vh;
+    top: 25vh;
     overflow: visible;
     position: relative;
     z-index: 1;
@@ -148,7 +161,6 @@ body{
 
 #r1{
     top: 8vh;
-    width: 41.5vw;
     position:relative;
     background-color: #FFFFFF;
 }
@@ -170,7 +182,7 @@ body{
 #st2{
     width: 30vw;
     left: 5vw;
-    top: 30vh;
+    top: 20vh;
     overflow: visible;
     position: relative;
 }
@@ -183,8 +195,6 @@ body{
 
 #video{
     overflow: visible;
-    background-color: #FFD94E;
-    padding: 3vh;
     width: 100%;
     height: 100%;
     position: absolute;

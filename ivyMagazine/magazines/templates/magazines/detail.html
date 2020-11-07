@@ -7,7 +7,7 @@
 <!--Carousel Wrapper-->
 <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators" >
     {% for p in photos %}
       <li data-target="#carousel-example-1z" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.counter0 == 0 %} active {% endif %}"></li>
     {% endfor %}

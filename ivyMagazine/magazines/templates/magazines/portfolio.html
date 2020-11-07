@@ -12,10 +12,10 @@
                 <div class = "gallery-container">
                     {% if posts %}
                         <select id="sort-select" onchange="location = this.value;">
-                            <option class="sort-default" hidden>SORT BY</option>
-                            <option class="sort-date" value="?sort=date">DATE(recent)</option>
-                            <option class="sort-title" value="?sort=title">TITLE(alphabetical)</option>
-                            <option class="sort-mostView" value="?sort=mostView">MOST VIEW</option>
+                            <option class="sort-default" style="font-family: Raleway ,serif;" hidden>SORT BY</option>
+                            <option class="sort-date" style="font-family: Raleway ,serif;" value="?sort=date">DATE(recent)</option>
+                            <option class="sort-title" style="font-family: Raleway ,serif;" value="?sort=title">TITLE(alphabetical)</option>
+                            <option class="sort-mostView" style="font-family: Raleway ,serif;" value="?sort=mostView">MOST VIEW</option>
                         </select>
                         {% for post in posts %}
                         <div class="gallery">
@@ -47,18 +47,18 @@
             <div class = 'col-5'>
                 <div class = "portfoliosection">
                     <div class="portfolio-content">
-                        <h1 class="heading">
+                        <h1>
                             PORTFOLIO
                         </h1>
-                        <p class="mDescription">
-                            View previous works by IVY Magazine<br />
-                            Club, including photoshoots that have<br />
-                            not been published in our magazines<br />
-                            before. IVY has shot a broad range of<br />
-                            concepts and styles through<br />
-                            collaborations with Korean designers<br />
+                        <div class="mDescription">
+                            View previous works by IVY Magazine
+                            Club, including photoshoots that have
+                            not been published in our magazines
+                            before. IVY has shot a broad range of
+                            concepts and styles through
+                            collaborations with Korean designers
                             and other clubs on campus.
-                          </p>
+                        </div>
                     </div>
                 </div>
             </div>
