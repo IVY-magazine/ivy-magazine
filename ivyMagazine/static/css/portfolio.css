@@ -23,17 +23,19 @@ font-family: 'Raleway', sans-serif;
 }
 
 .gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
+  margin: 20px;
+  border: 1px;
   float: left;
+  height: 30vh;
   width: 40%;
   position: relative;
 }
 
 .gallery-container{
-  left: 5vw;
   position: relative;
   height: 110%;
+  left: 1vw;
+  top: 10vh;
 }
 
 .gallery:hover {
@@ -49,7 +51,7 @@ font-family: 'Raleway', sans-serif;
   display: grid;
   grid-template-rows: 1;
   background-color: #FFFFFF;
-  height: fit-content
+  min-height: 100vh;
 }
 
 .description {
@@ -57,19 +59,45 @@ font-family: 'Raleway', sans-serif;
   text-align: center;
 }
 
+.emptyTxt{
+  position: relative;
+  margin: 2vw;
+  border: 1px;
+  height: 30vh;
+  top: 30vh;
+  left: 1vw;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.mDescription{
+  margin-left: 3vw;
+}
+
 .col-7{
+  position: relative;
   grid-column-start: 1;
   grid-column-end: 1;
   overflow-y: scroll;
   background-color:#FFD94E;
   height: 110%;
   max-width: 60vw;
+  height: 100vh;
 }
 
 .col-5{
   grid-column-start: 2;
   grid-column-end: 2;
   background-color:white;
-  max-width: 50vw;
+  max-width: 40vw;
   margin: 0;
+}
+
+#sort-select{
+  position: absolute;
+  margin: 20px;
+  right: 1vw;
+  top: -8vh;
+  background-color: #FFD94E;
+  border-color: #FFD94E;
 }

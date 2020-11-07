@@ -9,19 +9,17 @@
             
             
             <div class = 'col-7'>
-
-                <select id="sort-select" onchange="location = this.value;">
-                    <option class="sort-default" hidden>SORT BY</option>
-                    <option class="sort-date" value="?sort=date">DATE(recent)</option>
-                    <option class="sort-title" value="?sort=title">TITLE(alphabetical)</option>
-                    <option class="sort-mostView" value="?sort=mostView">MOST VIEW</option>
-                  </select>
                 <div class = "gallery-container">
                     {% if posts %}
-
+                        <select id="sort-select" onchange="location = this.value;">
+                            <option class="sort-default" hidden>SORT BY</option>
+                            <option class="sort-date" value="?sort=date">DATE(recent)</option>
+                            <option class="sort-title" value="?sort=title">TITLE(alphabetical)</option>
+                            <option class="sort-mostView" value="?sort=mostView">MOST VIEW</option>
+                        </select>
                         {% for post in posts %}
                         <div class="gallery">
-                            <a href="{% url 'detail' post.id %}">
+                            <a href="{% url 'detail' post.id %}" style="color: black;text-decoration: none;">
                                 <img src="{{post.image.url}}">
                                 <div class = "description">
                                     {{post.title}}
@@ -33,7 +31,7 @@
 
                     {% else %}
 
-                    <div class="gallery">
+                    <div class="emptyTxt">
                         Portfolio section is currently empty
                         <!-- <a href="">
                             <img src="{% static '/images/IVY.png' %}">

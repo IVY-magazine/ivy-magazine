@@ -23,8 +23,14 @@ body{
     font-size: 60px;
     line-height: 80px;
     text-align: center;
+    
     color: #000000;
+}
 
+.blogTitle:hover {
+    color: #FDF5E6;
+    text-decoration: none;
+    font-size: 70px;
 }
 .blogLink{
     font-family: Roboto;

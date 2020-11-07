@@ -31,13 +31,11 @@ nav ul #sign_in{
    margin-left: 5vw;
 }
   /* Change the link color to #111 (black) on hover */
-nav li a:hover {
-   
-  }
 
 .grid-containerNav{
     display: grid;
-    grid-template-rows: 2;
+    grid-template-rows: 1;
+    
     background-color: #FFFFFF;
     font-family: 'Playfair Display', serif;
     width: 100vw;
@@ -58,6 +56,11 @@ nav li a:hover {
   float: left;
 }
 
+.marginGrid{
+  grid-row: 2;
+  height: 8vh;
+}
+
 .nav-link1{
   grid-column-start: 2;
   grid-column-end: 2;
@@ -72,6 +75,12 @@ nav li a:hover {
   height: fit-content;
   width: fit-content;
   float: left;
+}
+
+.nav-link1:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
 }
 
 .nav-link2{
@@ -90,6 +99,12 @@ nav li a:hover {
   float: left;
 }
 
+.nav-link2:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
 .nav-link3{
   grid-column-start: 4;
   grid-column-end: 4;
@@ -104,6 +119,12 @@ nav li a:hover {
   height: fit-content;
   width: fit-content;
   float: left;
+}
+
+.nav-link3:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
 }
 
 .nav-link4{
@@ -122,6 +143,12 @@ nav li a:hover {
   float: left;
 }
 
+.nav-link4:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
 .nav-link5{
   grid-column-start: 6;
   grid-column-end: 6;
@@ -138,6 +165,12 @@ nav li a:hover {
   float: left;
 }
 
+.nav-link5:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
 .nav-link6{
   grid-column-start: 7;
   grid-column-end: 7;
@@ -152,6 +185,12 @@ nav li a:hover {
   height: fit-content;
   width: fit-content;
   float: left;
+}
+
+.nav-link6:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
 }
 
 .nav-link7{
@@ -171,26 +210,80 @@ nav li a:hover {
   float: left;
 }
 
+.nav-link7:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link8{
+  grid-column-start: 12;
+  grid-column-end: 12;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  text-align: right;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+}
+
+.nav-link8:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link9{
+  grid-column-start: 12;
+  grid-column-end: 11;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  text-align: right;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+}
+
+.nav-link9:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
 .hello-msg{
   position: relative;
-  left: 3vw;
   background-color : #FFFFFF;
-  height: 8vh;
-  grid-row: 2;
+  margin-top: 4.5vh;
+  grid-row: 1;
 }
 
 .hello-txt{
   font-family: 'Playfair Display', serif;
-  font-size: 1rem;
   font-weight: bold;
+  font-size: 2vw;
+  margin-left: 9vw;
 }
 
 .log-txt{
   font-family: 'Playfair Display', serif;
-  padding: 0.25vw;
-  font-size: 1rem;
+  font-size: 1.5vw;
+  text-align: right;
 }
 
 #nav-txt{
+  font-family: 'Playfair Display', serif;
   font-size: 1.5vw;
+  margin-top: 3.9vh;
 }
