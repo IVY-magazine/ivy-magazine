@@ -31,22 +31,22 @@
                         
                     </div>
                     <div class="inputBox">
-                        <input type="submit" value="Send a message"/>
+                        <input type="submit" name="message-submit" value="Send a message"/>
                     </div>
                 </form>
         </div>
         <div class="purchaseForm">
             <h2>Purchase Magazine</h2>
-                <form method="POST" class="formBox">
+                <form method="post" class="formBox" action={% url 'contactUs'%}>
                     {% csrf_token %}
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div>
-                        <input type="text" name="" required>
+                        <input type="text" name="purchase-name" required>
                      
                     </div>
                     <div class="inputBox">
                         <div class="formInfo">Your Email:</div>
-                        <input type="text" name="" required>
+                        <input type="text" name="purchase-email" required>
                 
                     </div>
                     <div class="inputBox w50">
@@ -56,24 +56,24 @@
                                 <tr>
                                     <td>
                                         <div class="mName">
-                                            <span class="mOption">Spring 2019</span>
+                                            <span class="mOption" >Spring 2019</span>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="checkboxControler">
-                                            <input type="checkbox" name="s2019"><br>
+                                            <input type="checkbox" value="s2019" name="magazine-list"><br>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <div class="mName">
-                                            <span class="mOption">Fall 2019</span>
+                                            <span class="mOption" >Fall 2019</span>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="checkboxControler">
-                                            <input type="checkbox" name="f2019"><br>
+                                            <input type="checkbox" value="f2019" name="magazine-list"><br>
                                         </div>
                                     </td>
                                 </tr>
@@ -85,7 +85,7 @@
                                     </td>
                                     <td>
                                         <div class="checkboxControler">
-                                            <input type="checkbox" name="s2020"><br>
+                                            <input type="checkbox" value="s2020" name="magazine-list"><br>
                                         </div>
                                     </td>
                                 </tr>
@@ -97,14 +97,14 @@
                                     </td>
                                     <td>
                                         <div class="checkboxControler">
-                                            <input type="checkbox" name="f2020">
+                                            <input type="checkbox" value="f2020" name="magazine-list">
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="inputBox w100">
-                            <input type="submit" value="Request subscription">
+                            <input type="submit" name="purchase-submit" value="Request subscription">
                         </div>
                     </form>
         </div>

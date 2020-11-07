@@ -96,22 +96,41 @@ def aboutUs(request):
 
 def contactUs(request):
     if request.method == 'POST':
-        message_name = request.POST["message-name"]
-        message_email = request.POST["message-email"]
-        message_subject = request.POST["message-subject"]
-        message_info = request.POST["message-info"]
+        if "message-submit" in request.POST:
+            message_name = request.POST["message-name"]
+            message_email = request.POST["message-email"]
+            message_subject = request.POST["message-subject"]
+            message_info = request.POST["message-info"]
 
-        
-        message_content = 'Subject: ' + message_subject + '\nUser Name: ' + message_name + '\nUser Email: ' + message_email + '\nMessage: ' + message_info
-        print(message_content)                    
-        # send an email
-        send_mail(
-            'IVY Contact Us message sent by ' + message_name, # subject
-            message_content,                   # message
-            settings.EMAIL_HOST_USER,          # from email
-            ['']       # to email
-        
-        )
+            message_content = 'Subject: ' + message_subject + '\nUser Name: ' + message_name + '\nUser Email: ' + message_email + '\nMessage: ' + message_info
+                        
+            # send an email
+            send_mail(
+                'IVY Contact Us message sent by ' + message_name, # subject
+                message_content,                   # message
+                settings.EMAIL_HOST_USER,          # from email
+                [settings.EMAIL_HOST_USER]       # to email
+            
+            )
+        if "purchase-submit" in request.POST:
+            purchase_name = request.POST["purchase-name"]
+            purchase_email = request.POST["purchase-email"]
+            purchase_magazine_list = request.POST.getlist('magazine-list')
+            purchase_magazines = ""
+            for magazine in purchase_magazine_list:
+                if not purchase_magazines:
+                    purchase_magazines += magazine
+                else:
+                    purchase_magazines += ' ,' + magazine
+            purchase_content = 'IVY Magazine Purchase Request ' + '\nUser Name: ' + purchase_name + '\nUser Email: ' + purchase_email + '\nMagazines to buy: ' + purchase_magazines
+            
+            send_mail(
+                    'IVY Magazine purchase request from ' + purchase_name, # subject
+                    purchase_content,                 
+                    settings.EMAIL_HOST_USER,          # from email
+                    [settings.EMAIL_HOST_USER]       # to email
+                
+                )
     context = {}
     return render(request, 'magazines/contactUs.html', context)
 
