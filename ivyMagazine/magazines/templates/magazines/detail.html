@@ -1,8 +1,8 @@
 
 {% extends 'magazines/main.html'%}
-
+{% load static %}
 {% block content %}
-
+<link rel="stylesheet" type="text/css" href="{% static '/css/detail.css' %}">
 
 <!--Carousel Wrapper-->
 <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
@@ -18,8 +18,11 @@
       {% for p in photos %}
       <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
         <img class="d-block w-100" src="{{p.images.url}}"
-          alt="First slide">
+          alt="First slide" >
       </div>
+      <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#basicExampleModal" style= "border-radius: 75px; position: absolute; margin-top: 3em;margin-left: 3em;z-index:1;padding">
+        i
+      </button>
       {% endfor %}
       <!--/First slide-->
     <!--/.Slides-->
@@ -32,13 +35,46 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+    
     <!--/.Controls-->
   </div>
+  
+  <!-- <br>
+  <div class="container" >
+    <br>
+    <h3 class = "title">{{post.title}}</h3>
+    <br>
+    <h3 class = "caption">{{post.description}}</h3>
+    <br>
+    <h3 class = "staff">{{post.involvedEditor}}</h3>
+    <br>
+  </div>
+  <br> -->
 
-  <div class="container">
-    <h3>{{post.description}}</h3>
-    <h3>{{post.involvedEditor}}</h3>
-    <h4>Viewcount:{{ post.update_viewcount }}</h4>
+  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{post.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container" >
+            <br>
+            <h4 class = "caption">{{post.description}}</h4>
+            <br>
+            <h4 class = "staff">{{post.involvedEditor}}</h4>
+            <br>
+            <!-- <h4>Viewcount:{{ post.update_viewcount }}</h4> -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   {% endblock %}
