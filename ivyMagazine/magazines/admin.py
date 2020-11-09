@@ -23,18 +23,23 @@ class MagazineAdmin(admin.ModelAdmin):
         magazine_data = (
             Magazine.objects.values('name', 'viewcount', 'magazineGroup')
         )
-        dl = Group.objects.values('name')
         l = User.objects.values_list('username','groups')
-
+        
         l_as_list = list(l)
         user_groups_data = (
             l_as_list
+         )
+        l2 = Group.objects.values('id', 'name')
+        l2_as_list = list(l2)
+        groups_data = (
+            l2_as_list
          )
 
         # Serialize and attach the chart data to the template context
         as_json = json.dumps(list(magazine_data), cls=DjangoJSONEncoder)
         as_json_2 = json.dumps(list(user_groups_data), cls=DjangoJSONEncoder)
-        extra_context = extra_context or {"magazine_data": as_json, "user_groups_data": as_json_2}
+        as_json_3 = json.dumps(list(groups_data), cls=DjangoJSONEncoder)
+        extra_context = extra_context or {"magazine_data": as_json, "user_groups_data": as_json_2, "groups_data": as_json_3}
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)

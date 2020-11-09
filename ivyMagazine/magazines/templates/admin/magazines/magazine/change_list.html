@@ -56,38 +56,50 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const ctx = document.getElementById('purchaseChart').getContext('2d');
   
-  x_axis_value = [];
-  y_axis_value = [];
-  magazineGroup = [];
-
-  function myFunction(item, index) {
-      magazineGroup.push(item.magazineGroup)
-  }
+  magazineGroup = {};
 
   const userGroupsData = {{ user_groups_data | safe }}
-
   magazineData = {{ magazine_data | safe }}
+  groupData = {{ groups_data | safe }}
 
+  function getMagazineId(item, index) {
+    var i
+    for (i = 0; i < groupData.length; i++){
+      if (groupData[i].name == item.magazineGroup){
+        magazineGroup[groupData[i].id] = item.magazineGroup;
+      }
+    }
+  }
+  // replace magazineName with magazine id
+  magazineData.forEach(getMagazineId);
+  console.log(magazineGroup);
+  
+  purchaseData = {}
+
+  function getMagazinePurchaseCount(item, index){
+ 
+    if (item[1]){
+      if (Object.keys(magazineGroup).includes(item[1].toString())){
+        if (purchaseData[magazineGroup[item[1].toString()]] == null){
+          purchaseData[magazineGroup[item[1].toString()]] = 1
+   
+        } else {
+          purchaseData[magazineGroup[item[1].toString()]] += 1
+        }
+        
+      }
+    }
+  }
+  userGroupsData.forEach(getMagazinePurchaseCount)
+  console.log(purchaseData)
   console.log(userGroupsData)
   console.log(magazineData)
-  magazineData.forEach(myFunction);
-  
-  // allMagazine = {};
-  // function mFunction(item, index) {
-  //   if magazineGroup.includes(item){
-  //     allMagazine[group.name] += 1
-  //   }else{
-  //     allMagazine[group.name] = 1
-  //   }
-
-  // }
-  
-
-  // userGroupsData.forEach(mFunction);
- 
-
+  console.log(groupData)
     
+  x_axis_value = Object.keys(purchaseData);
+  y_axis_value = Object.values(purchaseData);
 
+  
   // Render the chart
   const chart = new Chart(ctx, {
     type: 'bar',
