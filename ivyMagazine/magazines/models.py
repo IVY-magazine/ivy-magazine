@@ -29,11 +29,13 @@ class Magazine(models.Model):
     # category = models.CharField(max_length=200, null =True, choices=CATEGORY)
     description = models.CharField(max_length=300, null =True) 
     description2 = models.CharField(max_length=300, null =True)#blank=True
+    magazineGroup = models.CharField(max_length=50, null = True)
     pdf = models.FileField(null =True, blank = True)
     thumbNail = models.FileField(null = True, blank = True)
     date_created = models.DateTimeField(auto_now_add=True, null =True)
     viewcount = models.PositiveIntegerField(default=0)
     purchasecount = models.PositiveIntegerField(default=0)
+
 
     @property
     def update_viewcount(self):

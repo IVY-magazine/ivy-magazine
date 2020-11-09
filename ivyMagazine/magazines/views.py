@@ -5,7 +5,8 @@ from django.conf import settings
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-
+from django.contrib.auth.models import Group
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
 
@@ -88,6 +89,7 @@ def portfolio(request):
     context = {'posts':posts}
     return render(request, 'magazines/portfolio.html', context) 
 
+@login_required(login_url = 'login')
 def detail_view(request, id):
     post = get_object_or_404(Post, id=id)
     photos = PostImage.objects.filter(post=post)
@@ -104,9 +106,18 @@ def magazine(request):
     magazine = sorted(magazine,key = lambda x : x.date_created)
     return render(request, 'magazines/magazine.html', {'magazine':magazine})
 
+@login_required(login_url = 'login')
 def viewMagazine(request,pk):
     magazine = Magazine.objects.get(id=pk)
-    return render(request, 'magazines/viewMagazine.html', {'magazine':magazine})
+    for i in request.user.groups.all():
+        print(type(i))
+        print(i.name)
+        if magazine.magazineGroup == i.name:
+            return render(request, 'magazines/viewMagazine.html', {'magazine':magazine})
+
+    return HttpResponse('You are not authorized to view this page')
+    
+    # return render(request, 'magazines/viewMagazine.html', {'magazine':magazine})
     
 def aboutUs(request):
     context = {}
