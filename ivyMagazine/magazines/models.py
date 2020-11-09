@@ -35,19 +35,14 @@ class Magazine(models.Model):
     thumbNail = models.FileField(null = True, blank = True)
     date_created = models.DateTimeField(auto_now_add=True, null =True)
     viewcount = models.PositiveIntegerField(default=0)
-    purchasecount = models.PositiveIntegerField(default=0)
 
 
     @property
     def update_viewcount(self):
         self.viewcount = self.viewcount + 1
         self.save()
-        return self.viewcount
+        return ''
 
-    def update_purchasecount(self):
-        self.purchasecount = self.purchasecount + 1
-        self.save()
-        return self.purchasecount
 
     def save(self, *args, **kwargs):
         super(Magazine, self).save(*args, **kwargs)
