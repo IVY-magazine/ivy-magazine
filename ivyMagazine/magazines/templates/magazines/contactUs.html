@@ -12,12 +12,12 @@
                     {% csrf_token %}
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div><br>
-                        <input type="text" name="message-name" required>
+                        <input type="text" name="message-name" required value="{{ request.user.username }}">
                         
                     </div>
                     <div class="inputBox">
                         <div class="formInfo">Your Email:</div><br>
-                        <input type="text" name="message-email" required>
+                        <input type="text" name="message-email" required value="{{ request.user.email}}">
                         
                     </div>
                     <div class="inputBox">
@@ -41,12 +41,12 @@
                     {% csrf_token %}
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div>
-                        <input type="text" name="purchase-name" required>
+                        <input type="text" name="purchase-name" required value="{{ request.user.username }}">
                      
                     </div>
                     <div class="inputBox">
                         <div class="formInfo">Your Email:</div>
-                        <input type="text" name="purchase-email" required>
+                        <input type="text" name="purchase-email" required value="{{ request.user.email }}">
                 
                     </div>
                     <div class="inputBox w50">
