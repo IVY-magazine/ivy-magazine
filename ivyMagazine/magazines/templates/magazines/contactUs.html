@@ -8,7 +8,7 @@
     <div class="grid-container">
         <div class="contactForm">
             <h2>Contact Us</h2>
-                <form method="post" class="formBox" action={% url 'contactUs'%} >
+                <form method="post" class="formBox" action={% url 'contactUs'%} onsubmit="confirm('Request has been sent to the administrator');">
                     {% csrf_token %}
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div><br>
@@ -31,13 +31,13 @@
                         
                     </div>
                     <div class="inputBox">
-                        <input type="submit" name="message-submit" value="Send a message"/>
+                        <input type="submit" name="message-submit" value="Send a message" />
                     </div>
                 </form>
         </div>
         <div class="purchaseForm">
             <h2>Purchase Magazine</h2>
-                <form method="post" class="formBox" action={% url 'contactUs'%}>
+                <form method="post" class="formBox" action={% url 'contactUs'%} onsubmit="confirm('Purchase Request has been sent to the administrator');">
                     {% csrf_token %}
                     <div class="inputBox">
                         <div class="formInfo">Your Name:</div>
