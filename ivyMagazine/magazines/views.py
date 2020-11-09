@@ -112,7 +112,7 @@ def viewMagazine(request,pk):
     for i in request.user.groups.all():
         print(type(i))
         print(i.name)
-        if magazine.magazineGroup == i.name:
+        if magazine.magazineGroup == i.name or i.name == 'admin':
             return render(request, 'magazines/viewMagazine.html', {'magazine':magazine})
 
     return HttpResponse('You are not authorized to view this page')
