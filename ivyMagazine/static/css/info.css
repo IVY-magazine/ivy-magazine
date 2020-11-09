@@ -7,6 +7,7 @@
 
 tr{
   font-size: 2rem;
+  margin-right: 2vw;
   border-spacing:50em;
   border-collapse:separate; 
 }
@@ -22,6 +23,28 @@ table{
   margin-left: 20vw;
 }
 
+.center{
+  margin-right: 0vw;
+}
+
 .myInfo{
+  font-family: "Playfair Display", serif;
+}
+
+.nameField{
+  font-family: "Playfair Display", serif;
+}
+
+.emailField{
+  font-family: "Playfair Display", serif;
+}
+
+.nameValue{
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.emailValue{
+  font-weight: bold;
   font-family: "Playfair Display", serif;
 }

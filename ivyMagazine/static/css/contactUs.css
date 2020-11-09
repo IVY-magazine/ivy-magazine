@@ -119,7 +119,7 @@ section::before
     font-size: 0.9rem;
     text-align: left;
     margin-left: 7vw;
-    font-family: 'Raleway', serif;
+    font-family: Playfair Display, serif;
     font-weight: 10000;
     opacity: 70%;
 }
@@ -226,7 +226,7 @@ section::before
     font-size: 0.9rem;
     text-align: left;
     margin-left: 7vw;
-    font-family: 'Raleway', serif;
+    font-family: Playfair Display, serif;
     font-weight: 10000;
     opacity: 70%;
 }
@@ -278,11 +278,14 @@ section::before
     background: #ffffff;
     color: #333;
     border: 1px solid #333;
-    top: 12.5vh;
-    width: 255px;
+    top: 14vh;
+    width: fit-content;
     height: 63px;
     padding: 12px;
     font-size: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+
 
 }
 

@@ -8,7 +8,6 @@ body{
 .mainBody{
     align-items: center;
     overflow: visible;
-    background-color: #FFD94E;
     height: 100vh;
 }
 .titleBar{
@@ -26,6 +25,17 @@ body{
     
     color: #000000;
 }
+
+.mainBody a{
+    color: black !important;
+    font-family: Playfair, serif !important;
+}
+
+.mainBody .btn{
+    background-color: #FFD94E !important;
+    border: none !important;
+}
+
 
 .blogTitle:hover {
     color: #FDF5E6;
