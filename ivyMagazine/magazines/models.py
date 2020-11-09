@@ -29,6 +29,7 @@ class Magazine(models.Model):
     # category = models.CharField(max_length=200, null =True, choices=CATEGORY)
     description = models.CharField(max_length=300, null =True) 
     description2 = models.CharField(max_length=300, null =True)#blank=True
+    #tags = models.ManyToManyField(Tag)
     magazineGroup = models.CharField(max_length=50, null = True)
     pdf = models.FileField(null =True, blank = True)
     thumbNail = models.FileField(null = True, blank = True)
