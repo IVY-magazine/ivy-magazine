@@ -10,6 +10,8 @@ const imageSlides = document.getElementsByClassName("images");
 
 const navLeft = document.getElementsByClassName("left");
 const navRight = document.getElementsByClassName("right");
+
+const buttons = document.getElementsByClassName("button");
 var i = 0;
 var j = 0;
 
@@ -19,9 +21,12 @@ function viewMagazine(pdfURL){
 
 function right() {
     slides[i].classList.remove('active');
-    
+    buttons[i].style.pointerEvents = "none"
+    buttons[i].style.zIndex = "2"
     i = (i+1)% slides.length;
     slides[i].classList.add('active');
+    buttons[i].style.pointerEvents = "auto"
+    buttons[i].style.zIndex = "1"
     
   //transform((index = index < 3 ? ++index : 0));
 }
@@ -29,8 +34,12 @@ function right() {
 function left() {
   
   slides[i].classList.remove('active');
+  buttons[i].style.pointerEvents = "none"
+  buttons[i].style.zIndex = "2"
   i = (i-1 + slides.length)% slides.length;
   slides[i].classList.add('active');
+  buttons[i].style.pointerEvents = "auto"
+  buttons[i].style.zIndex = "1"
   
 }
 function rightImg() {
