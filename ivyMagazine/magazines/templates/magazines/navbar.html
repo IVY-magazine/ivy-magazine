@@ -15,10 +15,35 @@
       <a class="nav-link6" id="nav-txt" href="{% url 'contactUs' %}">CONTACT US</a>
       {%if request.user.is_authenticated%}
         <a class="nav-link8" id="nav-txt" href= "{% url 'logout' %}" style="text-decoration: none;">LOGOUT</a>
-        <a class="nav-link9" id="nav-txt" href= "{% url 'info' %}" style="text-decoration: none;">MYINFO</a>
+        <a class="nav-link9" id="nav-txt" href = ""data-toggle="modal" data-target="#userInfoModal" style="text-decoration: none; pointer-events:all;">MYINFO</a>
       {% else %}
         <a  class="nav-link7" id="nav-txt" href="{% url 'login' %}" id="sign_in" >SIGN IN</a>
       {% endif %}
     </div>
   
 </nav>
+
+<div class="modal fade" id="userInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-left: 16vw;margin-top: 20vh;height: 70vh; width: 56vw;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style= "width:40vw">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">My INFO</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container" >
+          <h3 class = "infoData"style="text-align: left">User: {{request.user.username}}</h3>
+          <br>
+          <h3 class = "infoData" style="text-align: left">Email: {{request.user.email}}</h3>
+          
+          <!-- <h4>Viewcount:{{ post.update_viewcount }}</h4> -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

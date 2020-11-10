@@ -21,7 +21,7 @@
       {% for p in photos %}
       <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}" style = "">
         <img class="d-block w-100" src="{{p.images.url}}"
-          alt="First slide" style="object-fit:cover">
+          alt="First slide" >
       </div>
       <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#basicExampleModal" style= "border-radius: 75px; position: absolute; margin-top: 3em;margin-left: 3em;z-index:1;padding">
         i
