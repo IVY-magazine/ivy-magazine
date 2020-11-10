@@ -85,6 +85,9 @@ main {
   background-color: #FFD94E;
   
 }
+.btn:hover{
+  transform: scale(1.1);
+}
 .content .button .btn {
   border: none;
   background-color: #FFD94E;
