@@ -115,7 +115,7 @@ def viewMagazine(request,pk):
         if magazine.magazineGroup == i.name or i.name == 'admin':
             return render(request, 'magazines/viewMagazine.html', {'magazine':magazine})
 
-    return HttpResponse('You are not authorized to view this page')
+    return render(request, 'magazines/magazine_access_denied.html',{'magazine':magazine})
     
     # return render(request, 'magazines/viewMagazine.html', {'magazine':magazine})
     
@@ -175,3 +175,7 @@ def signIn(request):
 def signUp(request):
     context = {}
     return render(request, 'magazines/signUp.html', context)
+
+def magazineAccessDenied(request):
+    context = {}
+    return render(request, 'magazines/magazine_access_denied.html', context)
