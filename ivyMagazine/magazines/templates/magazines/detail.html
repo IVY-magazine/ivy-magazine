@@ -54,21 +54,22 @@
   </div>
   <br> -->
 
-  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-left: 32vw;height: 70vh; width: 40vw;">
+  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-left: 32vw;margin-top: 20vh;height: 70vh; width: 40vw;">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">{{post.title}}</h5>
+          <h5 class="modal-title" id="exampleModalLabel">INFO</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <div class="container" >
+            <h2 style="text-align: center;">{{post.title}}</h2>
             <br>
-            <h4 class = "caption">{{post.description}}</h4>
+            <h5 class = "caption">{{post.description}}</h4>
             <br>
-            <h4 class = "staff">{{post.involvedEditor}}</h4>
+            <h6 class = "staff">{{post.involvedEditor}}</h4>
             <br>
             <!-- <h4>Viewcount:{{ post.update_viewcount }}</h4> -->
           </div>
