@@ -51,18 +51,20 @@
 		}
 
 		p{
-			width: 35vw;
-			margin-bottom: 4vh;
+			width: 25vw;
 			text-align: center;
 			justify-self: center;
+			padding: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 
 		.buttonsRow{
 			display: grid;
 			grid-row: 4;
 			grid-template-rows:1;
-			margin: 5vw;
 			justify-self: center;
+			padding: 20px;
 		}
 
 		#purchaseButton{
@@ -72,7 +74,7 @@
 			color: white !important;
 			border: none !important;
 			width: fit-content !important;
-			height: 5vh !important;
+			height: 40px !important;
 			border-radius: 12px !important;
 			box-shadow: none  !important;
 			outline: 0px  !important;
@@ -82,12 +84,12 @@
 		#returnButton{
 			grid-column-start: 2;
 			grid-column-end: 2;
-			margin-left: 5vw;
+			margin-left: 2vw;
 			background: #33ccff !important;
 			color: white !important;
 			border: none !important;
 			width: 10vw !important;
-			height: 5vh !important;
+			height: 40px !important;
 			border-radius: 12px !important;
 			box-shadow: none  !important;
 			outline: 0px  !important;
@@ -101,8 +103,8 @@
 	<div class="user_card">
 		<h3>Access Denied</h3>
 
-		<p style="grid-row:2;">You have not purchased this magazine yet.</p>
-		<p style="grid-row:3;">Please make the purchase if you wish to view the magazine.</p>
+		<p >You have not purchased this magazine yet.</p>
+		<p >Please make the purchase if you wish to view the magazine.</p>
 		<div class="buttonsRow">
 			<a class="btn btn-primary" id="purchaseButton" href="{%url 'contactUs' %}" >Purchase Magazine</a>
 			<a class="btn btn-primary" id="returnButton" href="{%url 'magazine' %}">Return</a>
