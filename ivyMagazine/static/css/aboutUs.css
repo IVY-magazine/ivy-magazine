@@ -29,7 +29,7 @@ body{
 .col-5{
     grid-column-start: 2;
     grid-column-end: 2;
-    max-width: 100%;
+    max-width: 80%;
     background-color:white;
     padding: 0;
     margin-left: 5vw;
@@ -164,6 +164,7 @@ body{
     top: 8vh;
     position:relative;
     background-color: #FFFFFF;
+    float: left;
 }
 
 #t1{
