@@ -3,18 +3,12 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class Tag(models.Model):
-    name = models.CharField(max_length=200, null =True)
-
-    def __str__(self):
-        return self.name    
 
 class Customer(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=200, null =True)
     email = models.CharField(max_length=200, null =True)
     data_created = models.DateTimeField(auto_now_add=True, null =True)
-    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.name
@@ -25,11 +19,8 @@ class Magazine(models.Model):
    
 
     name = models.CharField(max_length=200, null =True)
-    price = models.FloatField(null = True)
-    # category = models.CharField(max_length=200, null =True, choices=CATEGORY)
     description = models.CharField(max_length=300, null =True) 
-    description2 = models.CharField(max_length=300, null =True)#blank=True
-    #tags = models.ManyToManyField(Tag)
+    feature = models.CharField(max_length=300, null =True)
     magazineGroup = models.CharField(max_length=50, null = True)
     pdf = models.FileField(null =True, blank = True)
     thumbNail = models.FileField(null = True, blank = True)
@@ -52,19 +43,7 @@ class Magazine(models.Model):
     def __str__(self):
         return self.name
     
-# class Portfolio(models.Model):
 
-#     name = models.CharField(max_length=200, null =True)
-#     caption = models.CharField(max_length=100, null =True) #blank=True
-#     date_created = models.DateTimeField(auto_now_add=True, null =True)
-#     images = models.FileField(null =True, blank = True)
-
-#     def save(self, *args, **kwargs):
-#         super(Portfolio, self).save(*args, **kwargs)
-#         filename = self.images.url
-
-#     def __str__(self):
-#         return self.name
 
 from django.db import models
 

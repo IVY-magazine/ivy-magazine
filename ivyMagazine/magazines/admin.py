@@ -11,8 +11,6 @@ from django.db.models.functions import TruncDay
 from .models import *
 
 admin.site.register(Customer)
-# admin.site.register(Magazine)
-admin.site.register(Tag)
 
 @admin.register(Magazine)
 class MagazineAdmin(admin.ModelAdmin):
