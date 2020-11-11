@@ -1,7 +1,9 @@
 {% extends 'magazines/main.html'%}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static '/css/dummy.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/css/detail.css' %}">
+
+
 <div style="text-align: center; font-size:xx-large; background-color: #FFD94E;padding-top: 2vh;padding-bottom: 2vh;">
 {{post.title}}
 <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#basicExampleModal" style= "border-radius: 75px; margin-left: 1.5vw;">
@@ -18,7 +20,7 @@
         <div class="column">
         {% for p in photos %}
         {% if forloop.counter0|divisibleby:2 %}
-            <img src="{{p.images.url}}">
+            <img  src="{{p.images.url}}">
         {% endif %}
         {% endfor %}
         </div>
@@ -35,6 +37,8 @@
       
     </div>
   </div>
+
+  <!-- The Info Modal -->
   <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-left: 32vw;margin-top: 20vh;height: 70vh; width: 40vw;">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -61,4 +65,6 @@
       </div>
     </div>
   </div>
+
+
 {% endblock %}
