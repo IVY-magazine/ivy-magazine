@@ -1,5 +1,6 @@
-# IVY web magazine 
+# IVY web magazine v0.1
 * CSE 416 team project
+* https://ivymagazine.herokuapp.com/
 
 
 ## Team members
@@ -62,3 +63,21 @@ This web application will provide **IVY** four major features. The administrator
    + To report a new bug, click on the green “New issue” button on the top right corner of the page.
      - The following page will display a form that requires you to fill in the title of bug and comments about the bug.
      - Once all necessary fields are filled in, click on the green “Submit new issue” button on the  bottom right corner of the form.
+
+### Instructions for deploying website:
+1. Download and install PostgreSQL & PG Admin
+2. Login to PG admin & Create Database
+3. Connect database to Django App & run migrations
+4. Create database on AWS
+5. Connect to live AWS Database with PG admin & Django
+6. Upload the Django project on new Git Repo
+7. Link the new Repo with Heroku
+8. Deploy the branch on Heroku
+9. https://ivymagazine.herokuapp.com/
+
+
+### Step to release a New Version
+1. Update the release tag on github page
+2. Update version information on readme.md
+3. Commit the new files on git master branch
+4. Deploy branch on heroku page
