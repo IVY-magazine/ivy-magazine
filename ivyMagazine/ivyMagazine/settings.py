@@ -36,7 +36,7 @@ EMAIL_HOST_PASSWORD = 'ivyfall2018!'# from email password
 
  
 
-ALLOWED_HOSTS = ['*']  ###############################Change made from blank [] to [*]
+ALLOWED_HOSTS = ['52.231.196.194']  ###############################Change made from blank [] to [*]
 
 
 # Application definition
@@ -88,8 +88,12 @@ WSGI_APPLICATION = 'ivyMagazine.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ivymagazine',
+        'USER': 'ivyeditor',
+        'PASSWORD': 'ivyfall2018!',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
