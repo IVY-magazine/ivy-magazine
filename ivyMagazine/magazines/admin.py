@@ -6,7 +6,6 @@ from django.db.models import Count
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 from django.db.models.functions import TruncDay
-# Register your models here.
 
 from .models import *
 

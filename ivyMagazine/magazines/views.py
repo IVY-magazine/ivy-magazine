@@ -117,8 +117,6 @@ def viewMagazine(request,pk):
 
     return render(request, 'magazines/magazine_access_denied.html',{'magazine':magazine})
     
-    # return render(request, 'magazines/viewMagazine.html', {'magazine':magazine})
-    
 def aboutUs(request):
     context = {}
     return render(request, 'magazines/aboutUs.html', context)

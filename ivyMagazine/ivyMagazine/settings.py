@@ -36,7 +36,7 @@ EMAIL_HOST_PASSWORD = 'ivyfall2018!'# from email password
 
  
 
-ALLOWED_HOSTS = ['52.231.196.194']  ###############################Change made from blank [] to [*]
+ALLOWED_HOSTS = ['52.231.196.194']
 
 
 # Application definition
