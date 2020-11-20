@@ -17,26 +17,26 @@ class MagazineAdmin(admin.ModelAdmin):
     ordering = ("-date_created",)
 
     def changelist_view(self, request, extra_context=None):
+        # each column data of name, viewcount, and magazineGroup in Magazine objects
         magazine_data = (
             Magazine.objects.values('name', 'viewcount', 'magazineGroup')
         )
-        l = User.objects.values_list('username','groups')
-        
-        l_as_list = list(l)
+
+        # each column data of username and groups in User objects
         user_groups_data = (
-            l_as_list
+            list(User.objects.values_list('username','groups'))
          )
-        l2 = Group.objects.values('id', 'name')
-        l2_as_list = list(l2)
+
+        # each column data of id and name in Group objects
         groups_data = (
-            l2_as_list
+            list(Group.objects.values('id', 'name'))
          )
 
         # Serialize and attach the chart data to the template context
-        as_json = json.dumps(list(magazine_data), cls=DjangoJSONEncoder)
-        as_json_2 = json.dumps(list(user_groups_data), cls=DjangoJSONEncoder)
-        as_json_3 = json.dumps(list(groups_data), cls=DjangoJSONEncoder)
-        extra_context = extra_context or {"magazine_data": as_json, "user_groups_data": as_json_2, "groups_data": as_json_3}
+        as_json_magazine = json.dumps(list(magazine_data), cls=DjangoJSONEncoder)
+        as_json_user = json.dumps(list(user_groups_data), cls=DjangoJSONEncoder)
+        as_json_groups = json.dumps(list(groups_data), cls=DjangoJSONEncoder)
+        extra_context = extra_context or {"magazine_data": as_json_magazine, "user_groups_data": as_json_user, "groups_data": as_json_groups}
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
@@ -71,6 +71,8 @@ class PostAdmin(admin.ModelAdmin):
     ordering = ("-date_created",)
 
     def changelist_view(self, request, extra_context=None):
+
+        # each column data of title and viewcount in Post objects
         chart_data = (
             Post.objects.values('title', 'viewcount')
         )
