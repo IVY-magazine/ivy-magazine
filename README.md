@@ -1,6 +1,6 @@
 # IVY web magazine v0.1
 * CSE 416 team project
-* https://ivymagazine.herokuapp.com/
+* ivymagazine.koreasouth.cloudapp.azure.com
 
 
 ## Team members
@@ -65,19 +65,47 @@ This web application will provide **IVY** four major features. The administrator
      - Once all necessary fields are filled in, click on the green “Submit new issue” button on the  bottom right corner of the form.
 
 ### Instructions for deploying website:
-1. Download and install PostgreSQL & PG Admin
-2. Login to PG admin & Create Database
-3. Connect database to Django App & run migrations
-4. Create database on AWS
-5. Connect to live AWS Database with PG admin & Django
-6. Upload the Django project on new Git Repo
-7. Link the new Repo with Heroku
-8. Deploy the branch on Heroku
-9. https://ivymagazine.herokuapp.com/
+#1. Download and install PostgreSQL & PG Admin
+#2. Login to PG admin & Create Database
+#3. Connect database to Django App & run migrations
+#4. Create database on AWS
+#5. Connect to live AWS Database with PG admin & Django
+#6. Upload the Django project on new Git Repo
+#7. Link the new Repo with Heroku
+#8. Deploy the branch on Heroku
+#9. https://ivymagazine.herokuapp.com/
+
+1. Create VM resource in Microsoft Azure portal
+2. ssh into the virtual machine with the IP address provided by Azure
+3. Install necessary update and upgrade in the virtual machine
+4. run "sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl"
+   to install postgres and other necessities to the vm
+5. Enter command "sudo -u postgres psql"
+6. Configure installed postgresql database to match the needs. Detailed description
+   of how PostgreSQL database can be configured is included in the link provided at the end of this instruction
+7. Download ivy-magazine folder from github
+8. Use command "scp -r /directory/to/where/you/downloaded/ivy-magazine/ vm_username@provided_ip:/home/vm_username" to copy the folder into the vm
+9. Use "chmod -R 755 ivy-magazine/" to get full authority over this directory
+10. Install virtualenv to work through setup in virtual environment
+11. Run "source venv/bin/activate" to enter virtual environment
+12. Install django, gunicorn, psycopg2-binary, and pillow 
+13. Run python manage.py migrate to migrate data from the project into PostgreSQL database
+14. Run python manage.py collectstatic to collect all static files into a directory
+15. Run gunicorn --bind 0.0.0.0:8000 ivy-magazine.wsgi to bind gunicorn with port 8000
+16. Type in "deactivate" to exit virtual environment
+17. Follow steps provided by the youtube link from 20:44 to 24:28 to create and run gunicorn.socket and gunicorn.service files.
+18. Follow steps provided by the youtube link below from 25:27 to 28:02 to activate nginx in this project
+19. Run "sudo ufw delete allow 8000" and "sudo ufw allow 'Nginx Full'"
+20. In the Azure VM Resource you have created, go to "Network" tab and under "Inbound port rules", click "Add inbound security rule"
+    and change "destination port ranges" to 80, and give it a name in the "Name" tab. This will only allow network requests over HTTP to access this project.   
+
 
 
 ### Step to release a New Version
-1. Update the release tag on github page
-2. Update version information on readme.md
-3. Commit the new files on git master branch
-4. Deploy branch on heroku page
+1. Download the folder from this page
+2. Use command "scp -r /directory/to/where/you/downloaded/ivy-magazine/ vm_username@provided_ip:/home/vm_username" to copy the folder into the vm
+3. Use "chmod -R 755 ivy-magazine/" to get full authority over this directory
+4. Run "source venv/bin/activate" to enter virtual environment
+5. Run python manage.py migrate to migrate data from the project into PostgreSQL database
+6. Run python manage.py collectstatic to collect all static files into a directory
+7. Follow steps 15~20 in "instructions for deploying the website" from above to finalize the deploying steps for the New Version.

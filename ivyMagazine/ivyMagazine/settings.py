@@ -29,14 +29,14 @@ DEBUG = True #######################################Change made from True to Fal
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = False
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'ivisualizeyou@gmail.com'# from email
 EMAIL_HOST_PASSWORD = 'ivyfall2018!'# from email password
 
  
 
-ALLOWED_HOSTS = ['52.231.196.194']
+ALLOWED_HOSTS = ['52.231.153.16', 'ivymagazine.koreasouth.cloudapp.azure.com']#'52.231.196.194']  ###############################Change made from blank [] to [*]
 
 
 # Application definition
