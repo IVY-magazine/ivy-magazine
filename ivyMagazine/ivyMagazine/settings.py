@@ -26,18 +26,29 @@ SECRET_KEY = 'ej_q4hpb6jl3*lf8@rx=e((n3&@14jxp2at4s087dr$w4jnq22'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #######################################Change made from True to False
 
+# SENDGRID Email Settings
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'ivisualizeyou@gmail.com'
+# EMAIL_HOST_PASSWORD = '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'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+# SENDGRID_API_KEY = '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'
+# SENDGRID_SANDBOX_MODE_IN_DEBUG=False
+
+
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'ivisualizeyou@gmail.com'# from email
 EMAIL_HOST_PASSWORD = 'ivyfall2018!'# from email password
 
  
 
-ALLOWED_HOSTS = ['52.231.153.16', 'ivymagazine.koreasouth.cloudapp.azure.com']#'52.231.196.194']  ###############################Change made from blank [] to [*]
-
+# ALLOWED_HOSTS = ['52.231.153.16', 'ivymagazine.koreasouth.cloudapp.azure.com']#'52.231.196.194']  ###############################Change made from blank [] to [*]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -86,14 +97,21 @@ WSGI_APPLICATION = 'ivyMagazine.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'ivymagazine',
+#         'USER': 'ivyeditor',
+#         'PASSWORD': 'ivyfall2018!',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ivymagazine',
-        'USER': 'ivyeditor',
-        'PASSWORD': 'ivyfall2018!',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

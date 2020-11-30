@@ -97,7 +97,8 @@ This web application will provide **IVY** four major features. The administrator
 18. Follow steps provided by the youtube link below from 25:27 to 28:02 to activate nginx in this project
 19. Run "sudo ufw delete allow 8000" and "sudo ufw allow 'Nginx Full'"
 20. In the Azure VM Resource you have created, go to "Network" tab and under "Inbound port rules", click "Add inbound security rule"
-    and change "destination port ranges" to 80, and give it a name in the "Name" tab. This will only allow network requests over HTTP to access this project.   
+    and change "destination port ranges" to 80, and give it a name in the "Name" tab. This will only allow network requests over HTTP to access this project.
+21. To enable the email policy suitable for azure vm environment, open settings.py file in the ivyMagazine/ivyMagazine directory, comment the "Email Settings" block, and uncomment the "Sendgrid Email Settings" block.   
 
 
 
