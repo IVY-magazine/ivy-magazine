@@ -1,4 +1,4 @@
-# IVY web magazine v0.1
+# IVY web magazine v0.4
 * CSE 416 team project
 * ivymagazine.koreasouth.cloudapp.azure.com
 
