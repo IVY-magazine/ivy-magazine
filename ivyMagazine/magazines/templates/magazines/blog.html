@@ -14,31 +14,100 @@
     {% include 'magazines/navbar.html'%}
 
     <div class= 'titleBar'><a class = 'blogTitle' href = 'https://medium.com/@ivisualizeyou'>Blog</a></div>
-    <div class = 'mainBody'>
-        <div class = 'mainBody'id="retainable-rss-embed" 
-            data-rss="https://medium.com/feed/@ivisualizeyou"
-            data-maxcols="3" 
-            data-layout="slider" 
-            data-poststyle="inline" 
-            data-readmore="Read the rest" 
-            data-buttonclass="btn btn-primary" 
-            data-offset="-100">
+    <div class="container mt-5 pt-5" id="medium">
+        <div class="jumbotron text-center">
+            <div id="logo"></div>
+            <h1 class="display-4 mb-3">@ivisualizeyou's Posts</h1>
+            <a class="btn btn-outline-primary btn-lg" href="https://medium.com/@ivisualizeyou" target="_blank" role="button">View all posts</a>
+        </div>
+        <div class="row" id="jsonContent">
         </div>
     </div>
-    <div class = 'mainBody'>
-        <div class = 'mainBody'id="retainable-rss-embed" 
-            data-rss="https://medium.com/feed/@ivisualizeyou"
-            data-maxcols="3" 
-            data-layout="slider" 
-            data-poststyle="inline" 
-            data-readmore="Read the rest" 
-            data-buttonclass="btn btn-primary" 
-            data-offset="-100">
+
+
+        <ul id="pagin" class="pagination justify-content-center">
+        </ul>
+
+    <div class="text-center">
+        <div class="mb-5">
+            <a class="btn btn-outline-primary btn-lg mb-5" href="https://medium.com/@ivisualizeyou">View all Posts</a>
         </div>
+    </div>
     </div>
 </body>
-<script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+            //Creating a new Promise and passing resolve as the function's parameter. The arguments passed into resolve method will execute only after a particular line of code is done.
+            var mediumPromise = new Promise(function (resolve) {
+            var $content = $('#jsonContent');
+            var data = {
+                rss: 'https://medium.com/feed/@ivisualizeyou'
+            };
+            $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40ivisualizeyou', data, function (response) {
+                if (response.status == 'ok') {
+                    $("#logo").append(`<img src="${response.feed["image"]}" class="rounded mx-auto d-block">`)
+                    var output = '';
+                    $.each(response.items, function (k, item) {
+                        output += `<div class="card mb-3 mx-auto mr-5 " style="width: 20rem;">`;
+                        var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
+                        var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
+                        var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
+                        var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
+                        var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
+                        output += `<img src="${src}" class="card-img-top" alt="Cover image">`;
+                        output += `<div class="card-body">`;
+                        output += `<h5 class="card-title"><a href="${item.link}">${item.title}</a></h5>`;
+                        var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
+                        yourString = yourString.replace('h4', 'p');
+                        yourString = yourString.replace('h3', 'p');
+                        var maxLength = 120; // maximum number of characters to extract
+                        //trim the string to the maximum length
+                        var trimmedString = yourString.substr(0, maxLength);
+                        //re-trim if we are in the middle of a word
+                        trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+                        output += `<p class="card-text">${trimmedString}...</p>`;
+                        output += `<a href="${item.link}" class="btn btn-outline-success">Read More</a>`;
+                        output += '</div></div>';
+                        return k < 10;
+                    });
+                    resolve($content.html(output)); //Passing the output into the resolve function. This means that once it writes the output into the div, it will send a success response to carry out the next function in the .then() method.
+                }
+            });
+            });
+//.then() method executes the function after the Promise is resolved
+mediumPromise.then(function()
+            {
+                //Pagination
+                pageSize = 3;
+var pageCount = $(".card").length / pageSize; //Calculating the number of pages it the content needs to spread over
+//Running a loop to add the pagination links(numbers) dynamically
+for (var i = 0; i < pageCount; i++) {
+                    $("#pagin").append(`<li class="page-item"><a class="page-link" href="#">${(i + 1)}</a></li> `); //Appending the list elements to the unordered list(ul) in the HTML code
+                }
+                //Highlighting the first page number on load by giving it the class "active"
+                $("#pagin li:nth-child(1)").addClass("active");
+                //showpage adds the content on to each page
+                showPage = function (page) {
+                    $(".card").hide();
+                    $(".card").each(function (n) {
+                        if (n >= pageSize * (page - 1) && n < pageSize * page)
+                            $(this).show();
+                    });
+                }
+//On page load, It will display contents of first page
+showPage(1);
+//Highlights each page number(list element) onclick
+$("#pagin li").click(function () {
+                    $("#pagin li").removeClass("active");
+                    $(this).addClass("active");
+                    showPage(parseInt($(this).text()))
+                });
+            });
+        });
+</script>
+
 </html>
