@@ -53,54 +53,23 @@
                         <div class="formInfo">Select Magazine:</div><br>
                         <table class="checkTable">
                             <tbody>
+                                {% for i in magazine %}
+
+
+                                
                                 <tr>
                                     <td>
                                         <div class="mName" style="font-family:Playfair Display, serif;">
-                                            <span class="mOption" >Spring 2019</span>
+                                            <span class="mOption" >{{i.magazineGroup}}</span>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="checkboxControler">
-                                            <input type="checkbox" value="spring2019" name="magazine-list"><br>
+                                            <input type="checkbox" value="{{i.name}}" name="magazine-list"><br>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <div class="mName">
-                                            <span class="mOption" >Fall 2019</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="checkboxControler">
-                                            <input type="checkbox" value="fall2019" name="magazine-list"><br>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="mName">
-                                            <span class="mOption">Spring 2020</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="checkboxControler">
-                                            <input type="checkbox" value="spring2020" name="magazine-list"><br>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="mName">
-                                            <span class="mOption">Fall 2020</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="checkboxControler">
-                                            <input type="checkbox" value="fall2020" name="magazine-list">
-                                        </div>
-                                    </td>
-                                </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                         <div class="inputBox w100">

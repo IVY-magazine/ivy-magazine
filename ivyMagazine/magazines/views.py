@@ -158,7 +158,8 @@ def contactUs(request):
                     [settings.EMAIL_HOST_USER]       # to email
                 
                 )
-    context = {}
+    magazine = Magazine.objects.all()
+    context = {'magazine' : magazine}
     return render(request, 'magazines/contactUs.html', context)
 
 @login_required(login_url = 'login')
