@@ -90,7 +90,7 @@ def portfolio(request):
     return render(request, 'magazines/portfolio.html', context) 
 
 @login_required(login_url = 'login')
-def detail_view(request, id):
+def detailView(request, id):
     post = get_object_or_404(Post, id=id)
     photos = PostImage.objects.filter(post=post)
     context = {
