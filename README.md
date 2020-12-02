@@ -80,16 +80,18 @@ This web application will provide **IVY** four major features. The administrator
 11. Run "source venv/bin/activate" to enter virtual environment
 12. Install django, gunicorn, psycopg2-binary, and pillow 
 13. Run python manage.py migrate to migrate data from the project into PostgreSQL database
-14. Run python manage.py collectstatic to collect all static files into a directory
-15. Run gunicorn --bind 0.0.0.0:8000 ivy-magazine.wsgi to bind gunicorn with port 8000
-16. Type in "deactivate" to exit virtual environment
-17. Follow steps provided by the youtube link from 20:44 to 24:28 to create and run gunicorn.socket and gunicorn.service files.
-18. Follow steps provided by the youtube link below from 25:27 to 28:02 to activate nginx in this project
-19. Run "sudo ufw delete allow 8000" and "sudo ufw allow 'Nginx Full'"
-20. In the Azure VM Resource you have created, go to "Network" tab and under "Inbound port rules", click "Add inbound security rule"
+14. Optionally, create an admin account if necessary with the command python manage.py createsuperuser, which is also explained in detail in the youtube link provided below (from 15:30 - 15:58)
+15. Run python manage.py collectstatic to collect all static files into a directory
+16. Run gunicorn --bind 0.0.0.0:8000 ivy-magazine.wsgi to bind gunicorn with port 8000
+17. Type in "deactivate" to exit virtual environment
+18. Follow steps provided by the youtube link from 20:44 to 24:28 to create and run gunicorn.socket and gunicorn.service files.
+19. Follow steps provided by the youtube link below from 25:27 to 28:02 to activate nginx in this project
+20. Run "sudo ufw delete allow 8000" and "sudo ufw allow 'Nginx Full'"
+21. In the Azure VM Resource you have created, go to "Network" tab and under "Inbound port rules", click "Add inbound security rule"
     and change "destination port ranges" to 80, and give it a name in the "Name" tab. This will only allow network requests over HTTP to access this project.
-21. To enable the email policy suitable for azure vm environment, open settings.py file in the ivyMagazine/ivyMagazine directory, comment the "Email Settings" block, and uncomment the "Sendgrid Email Settings" block.
-22. Before the emailing ability in this software is enabled, the host must have a sendgrid account with an API key, as well as a Single Sender Identity configured. You may find more about this in www.sendgrid.com
+22. To allow new user accounts to be added automatically into the "Customer" model in the database, create a "customer" entry in the "Groups" tab in the admin page.  
+23. To enable the email policy suitable for azure vm environment, open settings.py file in the ivyMagazine/ivyMagazine directory, comment the "Email Settings" block, and uncomment the "Sendgrid Email Settings" block.
+24. Before the emailing ability in this software is enabled, the host must have a sendgrid account with an API key, as well as a Single Sender Identity configured. You may find more about this in www.sendgrid.com
 
 Youtube Tutorial Link:  https://www.youtube.com/watch?v=66IeCXomWqk&t=176s
 
@@ -102,7 +104,7 @@ Youtube Tutorial Link:  https://www.youtube.com/watch?v=66IeCXomWqk&t=176s
 4. Run "source venv/bin/activate" to enter virtual environment
 5. Run python manage.py migrate to migrate data from the project into PostgreSQL database
 6. Run python manage.py collectstatic to collect all static files into a directory
-7. Follow steps 15~20 in "instructions for deploying the website" from above to finalize the deploying steps for the New Version.
+7. Follow steps 15~24 in "instructions for deploying the website" from above to finalize the deploying steps for the New Version.
 
 ### Steps to carry out Unit Tests
 1. Travel down to the directory that contains manage.py.
