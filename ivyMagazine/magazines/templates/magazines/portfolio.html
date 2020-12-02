@@ -13,8 +13,8 @@
                     {% if posts %}
                         <select id="sort-select" onchange="location = this.value;">
                             <option class="sort-default" style="font-family: Raleway ,serif;" hidden>SORT BY</option>
-                            <option class="sort-date" style="font-family: Raleway ,serif;" value="?sort=date">DATE(recent)</option>
-                            <option class="sort-title" style="font-family: Raleway ,serif;" value="?sort=title">TITLE(alphabetical)</option>
+                            <option class="sort-date" style="font-family: Raleway ,serif;" value="?sort=date">DATE</option>
+                            <option class="sort-title" style="font-family: Raleway ,serif;" value="?sort=title">TITLE</option>
                             <option class="sort-mostView" style="font-family: Raleway ,serif;" value="?sort=mostView">MOST VIEW</option>
                         </select>
                         {% for post in posts %}
