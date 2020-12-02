@@ -91,6 +91,8 @@ This web application will provide **IVY** four major features. The administrator
 21. To enable the email policy suitable for azure vm environment, open settings.py file in the ivyMagazine/ivyMagazine directory, comment the "Email Settings" block, and uncomment the "Sendgrid Email Settings" block.
 22. Before the emailing ability in this software is enabled, the host must have a sendgrid account with an API key, as well as a Single Sender Identity configured. You may find more about this in www.sendgrid.com
 
+Youtube Tutorial Link:  https://www.youtube.com/watch?v=66IeCXomWqk&t=176s
+
 
 
 ### Step to release a New Version
