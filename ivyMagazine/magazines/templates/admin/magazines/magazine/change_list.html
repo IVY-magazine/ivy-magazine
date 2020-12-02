@@ -9,13 +9,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const ctx = document.getElementById('myChart').getContext('2d');
   
-  x_axis_value = [];
-  y_axis_value = [];
+  xAxisValue = [];
+  yAxisValue = [];
 
   function myFunction(item, index) {
       console.log(item)
-    x_axis_value.push(item.name);
-    y_axis_value.push(item.viewcount);
+      xAxisValue.push(item.name);
+      yAxisValue.push(item.viewcount);
   }
 
   const chartData = {{ magazine_data | safe }};
@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const chart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: x_axis_value,
+        labels: xAxisValue,
       datasets: [
         {
           label: 'Number of viewers',
-          data: y_axis_value,
+          data: yAxisValue,
           backgroundColor: 'rgba(54,162,235,0.2)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1,
@@ -96,19 +96,19 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(magazineData)
   console.log(groupData)
     
-  x_axis_value = Object.keys(purchaseData);
-  y_axis_value = Object.values(purchaseData);
+  xAxisValue = Object.keys(purchaseData);
+  yAxisValue = Object.values(purchaseData);
 
   
   // Render the chart
   const chart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: x_axis_value,
+        labels: xAxisValue,
       datasets: [
         {
           label: 'Number of purchases',
-          data: y_axis_value,
+          data: yAxisValue,
           backgroundColor: 'rgba(54,162,235,0.2)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1,

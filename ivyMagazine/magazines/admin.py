@@ -13,8 +13,8 @@ admin.site.register(Customer)
 
 @admin.register(Magazine)
 class MagazineAdmin(admin.ModelAdmin):
-    list_display = ("name", "date_created", "viewcount")
-    ordering = ("-date_created",)
+    list_display = ("name", "dateCreated", "viewcount")
+    ordering = ("-dateCreated",)
 
     def changelist_view(self, request, extra_context=None):
         # each column data of name, viewcount, and magazineGroup in Magazine objects
@@ -42,13 +42,13 @@ class MagazineAdmin(admin.ModelAdmin):
         return super().changelist_view(request, extra_context=extra_context)
 
 class CustomerAdmin(admin.ModelAdmin):
-    list_display = ("id", "name", "email", "data_created")
-    ordering = ("-date_created",)
+    list_display = ("id", "name", "email", "dataCreated")
+    ordering = ("-dateCreated",)
 
     def changelist_view(self, request, extra_context=None):
         # Aggregate new subscribers per day
         chart_data = (
-            Customer.objects.annotate(date=TruncDay("data_created"))
+            Customer.objects.annotate(date=TruncDay("dataCreated"))
             .values("date")
             .annotate(y=Count("id"))
             .order_by("-date")
@@ -67,8 +67,8 @@ class PostImageAdmin(admin.StackedInline):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ("id", "title", "date_created", "viewcount") 
-    ordering = ("-date_created",)
+    list_display = ("id", "title", "dateCreated", "viewcount") 
+    ordering = ("-dateCreated",)
 
     def changelist_view(self, request, extra_context=None):
 

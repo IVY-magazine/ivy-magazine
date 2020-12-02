@@ -8,7 +8,7 @@ class Customer(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=200, null =True)
     email = models.CharField(max_length=200, null =True)
-    data_created = models.DateTimeField(auto_now_add=True, null =True)
+    dataCreated = models.DateTimeField(auto_now_add=True, null =True)
 
     def __str__(self):
         return self.name
@@ -24,12 +24,12 @@ class Magazine(models.Model):
     magazineGroup = models.CharField(max_length=50, null = True)
     pdf = models.FileField(null =True, blank = True)
     thumbNail = models.FileField(null = True, blank = True)
-    date_created = models.DateTimeField(auto_now_add=True, null =True)
+    dateCreated = models.DateTimeField(auto_now_add=True, null =True)
     viewcount = models.PositiveIntegerField(default=0)
 
 
     @property
-    def update_viewcount(self):
+    def updateViewcount(self):
         self.viewcount = self.viewcount + 1
         self.save()
         return ''
@@ -52,14 +52,14 @@ class Post(models.Model):
     description = models.TextField()
     involvedEditor = models.TextField(blank=True)
     image = models.FileField(blank=True)
-    date_created = models.DateTimeField(auto_now_add=True, null =True)
+    dateCreated = models.DateTimeField(auto_now_add=True, null =True)
     viewcount = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.title
     
     @property
-    def update_viewcount(self):
+    def updateViewcount(self):
         self.viewcount = self.viewcount + 1
         self.save()
         return self.viewcount

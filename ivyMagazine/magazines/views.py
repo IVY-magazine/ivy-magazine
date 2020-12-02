@@ -78,7 +78,7 @@ def portfolio(request):
     print(sort)
 
     if sort == 'date':
-        posts = Post.objects.order_by('-date_created')
+        posts = Post.objects.order_by('-dateCreated')
     elif sort == 'title':
         posts = Post.objects.order_by('title')
     elif sort == 'mostView':
@@ -103,7 +103,7 @@ def detailView(request, id):
 @login_required(login_url = 'login')
 def magazine(request):
     magazine = Magazine.objects.all()
-    magazine = sorted(magazine,key = lambda x : x.date_created)
+    magazine = sorted(magazine,key = lambda x : x.dateCreated)
     return render(request, 'magazines/magazine.html', {'magazine':magazine})
 
 @login_required(login_url = 'login')

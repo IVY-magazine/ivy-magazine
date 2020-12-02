@@ -9,13 +9,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const ctx = document.getElementById('myChart').getContext('2d');
   
-  x_axis_value = [];
-  y_axis_value = [];
+  xAxisValue = [];
+  yAxisValue = [];
 
   function myFunction(item, index) {
       console.log(item)
-    x_axis_value.push(item.title);
-    y_axis_value.push(item.viewcount);
+      xAxisValue.push(item.title);
+      yAxisValue.push(item.viewcount);
   }
 
   const chartData = {{ chart_data | safe }};
@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const chart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: x_axis_value,
+        labels: xAxisValue,
       datasets: [
         {
           label: 'Number of viewers',
-          data: y_axis_value,
+          data: yAxisValue,
           backgroundColor: 'rgba(54,162,235,0.2)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1,
